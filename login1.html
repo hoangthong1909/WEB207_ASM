@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <script src="js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="js/bootstrap.min.js"></script>
+  <script src="https://kit.fontawesome.com/29b41ee1c8.js" crossorigin="anonymous"></script>
+</head>
+
+<body style="background-image: url('images/Hình-nền-Anime-4k-cho-desktop.jpg');" ng-app="app">
+  <div class="container" ng-controller="my_controller">
+    <header class="row  p-5 text-center"><span></span></header>
+    <nav class="row text-center s-"><span></span></nav>
+    <div class="row p-5">
+      <article class="col-lg-3 p-4 "><span></span></article>
+      <aside class="col-lg-6 bg-light p-4  ">
+        <div class="text-center"> <b class="fs-3 text-uppercase">Đăng Nhập</b> </div>
+        <form name="form_login">
+          <div class="input-group flex-nowrap p-3 pb-0 mt-4">
+            <span class="input-group-text" id="addon-wrapping"><i class="fas fa-user-alt"></i></span>
+            <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+              aria-describedby="addon-wrapping" ng-model="sv.fullname" name="fullname" ng-minlength="5"
+              ng-maxlength="25" required>
+            </div>
+            <div ng-hide="form_login.fullname.$untouched || form_login.fullname.$valid" class="text-danger ms-3">
+              <small ng-show="form_login.fullname.$error.required">
+                Tên Đăng Nhập Không được để trống
+              </small>
+              <small ng-show="form_login.fullname.$error.minlength || form_login.fullname.$error.maxlength ">
+                Tên Đăng nhập phải lớn hơn 5 kí tự và nhỏ hơn 25 kí tự
+              </small>
+            </div>
+          <div class="input-group flex-nowrap p-3 pb-0">
+            <span class="input-group-text" id="addon-wrapping"><i class="fas fa-key"></i></span>
+            <input type="password" class="form-control" placeholder="Password" aria-label="password"
+              aria-describedby="addon-wrapping" name="password" ng-model="sv.password" ng-minlength="6" required >
+          </div>
+          <div ng-hide="form_login.password.$untouched || form_login.password.$valid" class="text-danger ms-3">
+            <small ng-show="form_login.password.$error.required">
+               Mật Khẩu Không được để trống
+            </small>
+            <small ng-show="form_login.password.$error.minlength">
+              Mật Khẩu phải lớn hơn 6 kí tự 
+            </small>
+          </div>
+        </form>
+        <div class="col-md-4 offset-9 p-2 ">
+          <a class="text-decoration-none" href="quenmk.html">
+            Quên mật khẩu?
+          </a>
+        </div>
+        <div class="text-center">
+          <div class="col-12">
+            <a href="home.html">
+              <button type="submit" class="btn btn-success mt-3">Đăng Nhập</button>
+            </a>
+          </div>
+          <p class="mt-5">
+            Bạn chưa có tài khoản ? <a href="dangki.html" class="loginhere-link text-decoration-none">Đăng ký ngay</a>
+          </p>
+        </div>
+      </aside>
+      <aside class="col-3 col-sm-5 text-center p-4"><span></span></aside>
+    </div class="row">
+    <footer class="row p-2 text-center">
+      <span></span>
+    </footer>
+  </div>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/angularjs.min.js"></script>
+  <script>
+    const app = angular.module("app", []);
+
+    function myController($scope) {
+      $scope.sv = {
+        fullname: "",
+        password: "",
+      };
+    }
+
+    app.controller("my_controller", myController);
+  </script>
+</body>
+
+</html>
