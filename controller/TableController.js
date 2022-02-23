@@ -20,23 +20,18 @@ function tableController($scope, $rootScope, $http) {
     });
 
 
-  $scope.select = function (index) {
-    apiUpdate = api + "/" + $scope.students[index].id;
-    console.log(apiUpdate);
+  $scope.filltoForm = function (index) {
+    Update = api + "/" + $scope.students[index].id;
+    console.log(Update);
     $rootScope.index = index;
-    $scope.$parent.sv = angular.copy($scope.students[index]);
+    $rootScope.sv = angular.copy($scope.students[index]);
     console.log($scope.students[index].id);
-  }
-
-  $scope.onDelete = function () {
-    apiUpdate = api + "/" + $scope.students[index].id;
-    console.log(apiUpdate);
-
   }
   if(sessionStorage.getItem('isLogin')){
   $scope.login = true;
   $scope.info=angular.fromJson(sessionStorage.getItem('isLogin')) //chuyen chuoi Json sang thanh doi Tuong
   }
+  
   function checkLogin(name, password) {
     for (var i = 0; i < $scope.students.length; i++) {
       if (name == $scope.students[i].name &&

@@ -2,61 +2,153 @@
   "quizs": [
     {
       "id": 1,
-      "ques": "Câu 1. Câu lệnh SQL nào được dùng để truy xuất dữ liệu từ database?",
-      "as1": "Get",
-      "as2": "Open",
-      "as3": "Extract",
-      "as4": "Select",
-      "value": "Select"
+      "text": "Câu 1. Câu lệnh SQL nào được dùng để truy xuất dữ liệu từ database?",
+      "da1": "Get",
+      "da2": "Open",
+      "da3": "Extract1",
+      "da4": "Select",
+      "check": "2",
+      "da": "Open"
     },
     {
       "id": 2,
-      "ques": "Câu 2. Câu lệnh SQL nào được dùng để cập nhật dữ liệu từ database?",
-      "as1": "Get",
-      "as2": "Open",
-      "as3": "Update",
-      "as4": "Select",
-      "value": "Update"
-    },
-    {
-      "id": 3,
-      "ques": "Câu 3. Câu lệnh SQL nào được dùng để xóa dữ liệu từ database?",
-      "author": "typicode"
-    },
-    {
-      "id": 4,
-      "ques": "Câu 4. Câu lệnh SQL nào được dùng để chèn thêm dữ liệu vào database?",
-      "author": "typicode"
+      "text": "Câu 2. Câu lệnh SQL nào được dùng để cập nhật dữ liệu từ databdae?",
+      "da1": "Get",
+      "da2": "Open",
+      "da3": "Update",
+      "da4": "Select",
+      "check": "2",
+      "da": "Open"
     },
     {
       "id": 5,
-      "ques": "Câu 5. Trong SQL, làm thế nào để chọn tất cả các cột dữ liệu trong bảng Persons?",
-      "author": "typicode"
+      "text": "Câu lệnh SQL nào được dùng để xóa dữ liệu trong database?",
+      "da": "Delete",
+      "da1": "Remove",
+      "da2": "Delete",
+      "da3": "Del",
+      "da4": "Backspace",
+      "check": "2"
     },
     {
       "id": 6,
-      "ques": "Câu 6. Trong SQL làm thế nào để chọn tất cả các bản ghi từ bảng Persons với giá trị trong cột FirstName là Peter?",
-      "author": "typicode"
+      "text": "Câu lệnh SQL nào được dùng để cập nhật dữ liệu trong database?",
+      "da": "Update",
+      "da1": "Update",
+      "da2": "Insert",
+      "da3": "Into",
+      "da4": "From",
+      "check": "1"
     },
     {
       "id": 7,
-      "ques": "Câu 7. Cú pháp SQL nào được dùng để trả về những giá trị khác nhau?",
-      "author": "typicode"
+      "text": "Câu lệnh SQL nào được dùng để truy vấn dữ liệu trong database?",
+      "da": "Select",
+      "da1": "Update",
+      "da2": "Insert",
+      "da3": "Into",
+      "da4": "Select",
+      "check": "1"
     },
     {
       "id": 8,
-      "ques": "Câu 8. Từ khóa SQL nào được sử dụng để sắp xếp danh sách kết quả?",
-      "author": "typicode"
+      "text": "Cú pháp SQL nào được dùng để trả về những giá trị khác nhau?",
+      "da": "Select Distinct",
+      "da1": "Select Identity",
+      "da2": "Select Differnt",
+      "da3": "Select Unique",
+      "da4": "Select Distinct",
+      "check": "4"
+    },
+    {
+      "id": 3,
+      "text": "Trong SQL, làm thế nào để chọn tất cả các cột từ bảng Persons?",
+      "da": "SELECT * FROM Persons",
+      "da1": "SELECT * FROM Persons",
+      "da2": "SELECT *.Persons",
+      "da3": "SELECT Persons",
+      "da4": "SELECT [all] FROM Persons",
+      "check": "1"
     },
     {
       "id": 9,
-      "ques": "Câu 9. Trong SQL, làm thế nào để trả về số lượng các bản ghi trong bảng Persons?",
-      "author": "typicode"
+      "text": "Trong SQL, làm thế nào để trả về số lượng các bản ghi trong bảng Persons:",
+      "da": "SELECT COUNT (*) FROM Persons",
+      "da1": "SELECT COUNT (*) FROM Persons",
+      "da2": "SELECT COLUMNS (*) FROM Persons",
+      "da3": "SELECT COUNT () FROM Persons",
+      "da4": "SELECT COLUMN () FROM Persons",
+      "check": "1"
     },
     {
       "id": 10,
-      "ques": "Câu 10. Kiểu khóa nào sau đây sẽ ngăn chặn bất kỳ người dùng nào truy cập vào bảng dữ liệu?",
-      "author": "typicode"
+      "text": "Kiểu khóa nào sau đây sẽ ngăn chặn bất kỳ người dùng nào truy cập vào bảng dữ liệu:",
+      "da": "SHARED",
+      "da1": "EXPLICIT",
+      "da2": "IMPLICIT",
+      "da3": "EXCLUSIVE",
+      "da4": "SHARED",
+      "check": "4"
+    },
+    {
+      "id": 11,
+      "text": "Từ khóa SQL nào được sử dụng để sắp xếp danh sách kết quả?",
+      "da": "SORT",
+      "da1": "SORT BY",
+      "da2": "ORDER BY",
+      "da3": "ORDER",
+      "da4": "SORT",
+      "check": "4"
+    },
+    {
+      "id": 12,
+      "text": "Câu lệnh SQL nào được dùng để thêm dữ liệu trong database?",
+      "da": "Open",
+      "da1": "Get",
+      "da2": "Open",
+      "da3": "Select",
+      "da4": "New",
+      "check": "2"
+    },
+    {
+      "text": "ABC",
+      "da1": "1",
+      "da2": "2",
+      "da3": "3",
+      "da4": "4",
+      "id": 13,
+      "da": "1",
+      "check": "1"
+    },
+    {
+      "text": "ABCD",
+      "da1": "1",
+      "da2": "2",
+      "da3": "3",
+      "da4": "4",
+      "da": "3",
+      "check": "3",
+      "id": 14
+    },
+    {
+      "text": "Câu lệnh SQL nào được dùng để xóa dữ liệu trong database?",
+      "da1": "Remove",
+      "da2": "Delete",
+      "da4": "Backspace",
+      "da3": "Del",
+      "da": "Delete",
+      "check": "2",
+      "id": 15
+    },
+    {
+      "text": "ABC",
+      "da1": "Remove",
+      "da2": "Delete",
+      "da3": "Del",
+      "da4": "Backspace",
+      "check": "2",
+      "da": "Delete",
+      "id": 16
     }
   ],
   "sv": [
@@ -64,48 +156,18 @@
       "email": "thonghh@gmail.com",
       "pass1": "123123",
       "pass": "123123",
-      "fullname": "ngu",
+      "fullname": "ngu12345",
       "gender": "1",
-      "address": "ngu111111111111111",
+      "address": "ngu1",
       "isAdmin": "Admin",
       "id": 8,
       "name": "Admin"
     },
     {
-      "email": "thongpz@gmail.com",
-      "pass1": "123123",
-      "pass": "123123",
-      "fullname": "ngu",
-      "gender": "1",
-      "address": "ngu111111111111111",
-      "id": 9,
-      "name": "Admin2"
-    },
-    {
-      "email": "111111@gmail.com",
-      "pass1": "123123",
-      "pass": "123123",
-      "fullname": "ngu",
-      "gender": "1",
-      "address": "ngu111111111111111",
-      "id": 10,
-      "name": "Admin Pro 2"
-    },
-    {
-      "email": "thanh2@gmail.com",
-      "pass1": "tms123",
-      "pass": "tms123",
-      "fullname": "thanhpro",
-      "gender": "0",
-      "address": "ha Noi",
-      "id": 11,
-      "name": "Admin Pro 3"
-    },
-    {
       "email": "sangngu123321@gmail.com",
       "pass1": "123123",
       "pass": "123123",
-      "fullname": "ngu",
+      "fullname": "ngu1",
       "gender": "1",
       "address": "ngu111111111111111",
       "id": 12,
