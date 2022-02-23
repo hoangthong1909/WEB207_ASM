@@ -23,13 +23,13 @@
             <div class="col-xl-9">
               <input type="text" class="form-control" placeholder=" Enter Name" aria-label="Username"
                 aria-describedby="addon-wrapping"
-                ng-class="{'redBorder':form_login.fullname.$invalid && form_login.fullname.$untouched}"
-                ng-model="sv.fullname" name="fullname" ng-minlength="5" ng-maxlength="25" id="fullname" required>
-              <div ng-hide="form_login.fullname.$untouched || form_login.fullname.$valid" class="text-danger mt-1">
-                <small ng-show="form_login.fullname.$error.required">
+                ng-class="{'redBorder':form_login.name.$invalid && form_login.name.$untouched}"
+                ng-model="sv.name" name="name" ng-minlength="5" ng-maxlength="25" id="name" required>
+              <div ng-hide="form_login.name.$untouched || form_login.name.$valid" class="text-danger mt-1">
+                <small ng-show="form_login.name.$error.required">
                   Tên Đăng Nhập Không được để trống
                 </small>
-                <small ng-show="form_login.fullname.$error.minlength || form_login.fullname.$error.maxlength ">
+                <small ng-show="form_login.name.$error.minlength || form_login.name.$error.maxlength ">
                   Tên Đăng nhập phải lớn hơn 5 kí tự và nhỏ hơn 25 kí tự
                 </small>
               </div>
@@ -40,12 +40,12 @@
             <div class="col-xl-9">
               <input type="text" class="form-control" placeholder="Username" aria-label="Username"
               aria-describedby="addon-wrapping"
-              ng-model="sv.name" name="name" ng-minlength="5" ng-maxlength="25" id="name" required>
-            <div ng-hide="form_login.name.$untouched || form_login.name.$valid" class="text-danger mt-1">
-              <small ng-show="form_login.name.$error.required">
+              ng-model="sv.fullname" name="fullname" ng-minlength="5" ng-maxlength="25" id="name" required>
+            <div ng-hide="form_login.fullname.$untouched || form_login.fullname.$valid" class="text-danger mt-1">
+              <small ng-show="form_login.fullname.$error.required">
                 Họ Tên Không được để trống
               </small>
-              <small ng-show="form_login.name.$error.minlength || form_login.name.$error.maxlength ">
+              <small ng-show="form_login.fullname.$error.minlength || form_login.fullname.$error.maxlength ">
                 Họ Tên phải lớn hơn 5 kí tự và nhỏ hơn 25 kí tự
               </small>
             </div>

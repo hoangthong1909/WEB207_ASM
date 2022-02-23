@@ -1,37 +1,88 @@
 {
-  "sv": [
+  "quizs": [
     {
-      "gender": "1",
-      "name": "Admin Pro 2",
-      "fullname": "Admin",
-      "pass1": "111111",
-      "address": "11111111111111111111111111",
-      "email": "thong@gmail.com",
-      "pass": "111111",
-      "id": 7
+      "id": 1,
+      "ques": "Câu 1. Câu lệnh SQL nào được dùng để truy xuất dữ liệu từ database?",
+      "as1": "Get",
+      "as2": "Open",
+      "as3": "Extract",
+      "as4": "Select",
+      "value": "Select"
     },
     {
-      "email": "sangngu@gmail.com",
+      "id": 2,
+      "ques": "Câu 2. Câu lệnh SQL nào được dùng để cập nhật dữ liệu từ database?",
+      "as1": "Get",
+      "as2": "Open",
+      "as3": "Update",
+      "as4": "Select",
+      "value": "Update"
+    },
+    {
+      "id": 3,
+      "ques": "Câu 3. Câu lệnh SQL nào được dùng để xóa dữ liệu từ database?",
+      "author": "typicode"
+    },
+    {
+      "id": 4,
+      "ques": "Câu 4. Câu lệnh SQL nào được dùng để chèn thêm dữ liệu vào database?",
+      "author": "typicode"
+    },
+    {
+      "id": 5,
+      "ques": "Câu 5. Trong SQL, làm thế nào để chọn tất cả các cột dữ liệu trong bảng Persons?",
+      "author": "typicode"
+    },
+    {
+      "id": 6,
+      "ques": "Câu 6. Trong SQL làm thế nào để chọn tất cả các bản ghi từ bảng Persons với giá trị trong cột FirstName là Peter?",
+      "author": "typicode"
+    },
+    {
+      "id": 7,
+      "ques": "Câu 7. Cú pháp SQL nào được dùng để trả về những giá trị khác nhau?",
+      "author": "typicode"
+    },
+    {
+      "id": 8,
+      "ques": "Câu 8. Từ khóa SQL nào được sử dụng để sắp xếp danh sách kết quả?",
+      "author": "typicode"
+    },
+    {
+      "id": 9,
+      "ques": "Câu 9. Trong SQL, làm thế nào để trả về số lượng các bản ghi trong bảng Persons?",
+      "author": "typicode"
+    },
+    {
+      "id": 10,
+      "ques": "Câu 10. Kiểu khóa nào sau đây sẽ ngăn chặn bất kỳ người dùng nào truy cập vào bảng dữ liệu?",
+      "author": "typicode"
+    }
+  ],
+  "sv": [
+    {
+      "email": "thonghh@gmail.com",
       "pass1": "123123",
       "pass": "123123",
       "fullname": "ngu",
       "gender": "1",
       "address": "ngu111111111111111",
+      "isAdmin": "Admin",
       "id": 8,
-      "name": "Admin Pro 2"
+      "name": "Admin"
     },
     {
-      "email": "sangngu@gmail.com",
+      "email": "thongpz@gmail.com",
       "pass1": "123123",
       "pass": "123123",
       "fullname": "ngu",
       "gender": "1",
       "address": "ngu111111111111111",
       "id": 9,
-      "name": "Admin Pro 2"
+      "name": "Admin2"
     },
     {
-      "email": "sangngu@gmail.com",
+      "email": "111111@gmail.com",
       "pass1": "123123",
       "pass": "123123",
       "fullname": "ngu",
@@ -51,14 +102,14 @@
       "name": "Admin Pro 3"
     },
     {
-      "email": "sangngu@gmail.com",
+      "email": "sangngu123321@gmail.com",
       "pass1": "123123",
       "pass": "123123",
       "fullname": "ngu",
       "gender": "1",
       "address": "ngu111111111111111",
       "id": 12,
-      "name": "Admin Pro 2"
+      "name": "thongpz"
     },
     {
       "email": "sangngu@gmail.com",
@@ -68,282 +119,7 @@
       "gender": "1",
       "address": "ngu111111111111111",
       "id": 13,
-      "name": "Admin Pro 2"
-    },
-    {
-      "email": "sangngu@gmail.com",
-      "pass1": "123123",
-      "pass": "123123",
-      "fullname": "ngu",
-      "gender": "1",
-      "address": "ngu111111111111111",
-      "id": 14,
-      "name": "Admin Pro 21111111111111"
-    },
-    {
-      "email": "sangngu@gmail.com",
-      "pass1": "123123",
-      "pass": "123123",
-      "fullname": "ngu",
-      "gender": "1",
-      "address": "ngu111111111111111",
-      "id": 15,
-      "name": "Admin Pro 2"
-    },
-    {
-      "email": "sangngu@gmail.com",
-      "pass1": "123123",
-      "pass": "123123",
-      "fullname": "ngu",
-      "gender": "1",
-      "address": "ngu111111111111111",
-      "id": 16,
-      "name": "Admin Pro 2"
-    },
-    {
-      "email": "thanh2@gmail.com",
-      "pass1": "tms123",
-      "pass": "tms123",
-      "fullname": "thanhpro",
-      "gender": "0",
-      "address": "ha Noi",
-      "id": 17,
-      "name": "Admin Pro 3"
-    },
-    {
-      "email": "sangngu@gmail.com",
-      "pass1": "123123",
-      "pass": "123123",
-      "fullname": "ngu11111111111",
-      "gender": "1",
-      "address": "ngu111111111111111",
-      "id": 18,
-      "name": "Admin Pro 211111"
-    },
-    {
-      "email": "sangngu@gmail.com",
-      "pass1": "123123",
-      "pass": "123123",
-      "fullname": "ngu",
-      "gender": "1",
-      "address": "ngu111111111111111",
-      "id": 19,
-      "name": "Admin Pro 2"
-    },
-    {
-      "email": "sangngu@gmail.com",
-      "pass1": "123123",
-      "pass": "123123",
-      "fullname": "ngu",
-      "gender": "1",
-      "address": "ngu111111111111111",
-      "id": 20,
-      "name": "Admin Pro 2"
-    },
-    {
-      "email": "sangngu@gmail.com",
-      "pass1": "123123",
-      "pass": "123123",
-      "fullname": "ngu",
-      "gender": "1",
-      "address": "ngu111111111111111",
-      "id": 21,
-      "name": "Admin Pro 2"
-    },
-    {
-      "email": "sangngu@gmail.com",
-      "pass1": "123123",
-      "pass": "123123",
-      "fullname": "ngu",
-      "gender": "1",
-      "address": "ngu111111111111111",
-      "id": 22,
-      "name": "Admin Pro 2"
-    },
-    {
-      "email": "sangngu@gmail.com",
-      "pass1": "123123",
-      "pass": "123123",
-      "fullname": "ngu",
-      "gender": "1",
-      "address": "ngu111111111111111",
-      "id": 23,
-      "name": "Admin Pro 2"
-    },
-    {
-      "email": "sangngu@gmail.com",
-      "pass1": "123123",
-      "pass": "123123",
-      "fullname": "ngu",
-      "gender": "1",
-      "address": "ngu111111111111111",
-      "id": 24,
-      "name": "Admin Pro 2"
-    },
-    {
-      "email": "sangngu@gmail.com",
-      "pass1": "123123",
-      "pass": "123123",
-      "fullname": "ngu",
-      "gender": "1",
-      "address": "ngu111111111111111",
-      "id": 25,
-      "name": "Admin Pro 2"
-    },
-    {
-      "gender": "1",
-      "fullname": "Hoàng Trung Thông",
-      "name": "thonghahha",
-      "email": "thong@gmail.com",
-      "password": "1111111",
-      "address": "HaNoi",
-      "id": 26
-    },
-    {
-      "gender": "1",
-      "fullname": "Hoàng Trung Thông",
-      "name": "thonghahha",
-      "email": "thong@gmail.com",
-      "password": "111111",
-      "address": "111111111",
-      "id": 29
-    },
-    {
-      "gender": "1",
-      "name": "aaaaaaaa",
-      "id": 30
-    },
-    {
-      "gender": "1",
-      "name": "aaaaaaaa",
-      "id": 31
-    },
-    {
-      "gender": "1",
-      "name": "aaaaaaaa",
-      "id": 32
-    },
-    {
-      "gender": "1",
-      "name": "aaaaaaaa",
-      "id": 33,
-      "email": "admin@gmail.com"
-    },
-    {
-      "gender": "1",
-      "name": "aaaaaaaa",
-      "id": 34,
-      "email": "admin@gmail.com",
-      "fullname": "aaaaaaaaa"
-    },
-    {
-      "gender": "1",
-      "name": "aaaaaaaa",
-      "id": 35,
-      "email": "admin@gmail.com",
-      "fullname": "aaaaaaaaa",
-      "pass": "123456",
-      "pass1": "123456"
-    },
-    {
-      "gender": "1",
-      "name": "aaaaaaaa",
-      "id": 36,
-      "email": "admin@gmail.com",
-      "fullname": "aaaaaaaaa",
-      "pass": "123456",
-      "pass1": "123456",
-      "address": "1111111111111111"
-    },
-    {
-      "gender": "1",
-      "name": "aaaaaaaa",
-      "id": 37,
-      "email": "admin@gmail.com",
-      "fullname": "aaaaaaaaa",
-      "pass": "123456",
-      "pass1": "123456",
-      "address": "1111111111111111"
-    },
-    {
-      "gender": "1",
-      "name": "aaaaaaaa",
-      "id": 38,
-      "email": "admin@gmail.com",
-      "fullname": "aaaaaaaaa",
-      "pass": "123456",
-      "pass1": "123456",
-      "address": "1111111111111111"
-    },
-    {
-      "gender": "1",
-      "name": "aaaaaaaa",
-      "id": 39,
-      "email": "admin@gmail.com",
-      "fullname": "aaaaaaaaa",
-      "pass": "123456",
-      "pass1": "123456",
-      "address": "1111111111111111"
-    },
-    {
-      "gender": "1",
-      "name": "aaaaaaaa",
-      "id": 40,
-      "email": "admin@gmail.com",
-      "fullname": "aaaaaaaaa",
-      "pass": "123456",
-      "pass1": "123456",
-      "address": "1111111111111111"
-    },
-    {
-      "gender": "1",
-      "name": "aaaaaaaa",
-      "id": 41,
-      "email": "admin@gmail.com",
-      "fullname": "aaaaaaaaa",
-      "pass": "123456",
-      "pass1": "123456",
-      "address": "1111111111111111"
-    },
-    {
-      "gender": "1",
-      "name": "aaaaaaaa",
-      "id": 42,
-      "email": "admin@gmail.com",
-      "fullname": "aaaaaaaaa",
-      "pass": "123456",
-      "pass1": "123456",
-      "address": "1111111111111111"
-    },
-    {
-      "gender": "1",
-      "name": "Admin Pro 2",
-      "email": "thong@gmail.com",
-      "fullname": "Admin",
-      "pass": "111111",
-      "pass1": "111111",
-      "address": "11111111111",
-      "id": 43
-    },
-    {
-      "gender": "1",
-      "fullname": "Hoàng Trung Thông",
-      "name": "thongpz",
-      "email": "thong@gmail.com",
-      "pass": "111111",
-      "pass1": "111111",
-      "address": "HaNoi",
-      "id": 44
-    },
-    {
-      "gender": "1",
-      "fullname": "Hoàng Trung Thông",
-      "name": "Trần Thị Huệ",
-      "email": "anhthong645@gmail.com",
-      "pass1": "1111111",
-      "pass": "1111111",
-      "address": "HaNoi",
-      "id": 45
+      "name": "thonghoang"
     },
     {
       "gender": "1",
@@ -354,6 +130,36 @@
       "address": "HaNoi",
       "fullname": "Hoàng Trung Thôngaaaaaaa",
       "id": 46
+    },
+    {
+      "gender": "1",
+      "name": "thongzz",
+      "fullname": "HoangTrungThong",
+      "email": "thanh2@gmail.com",
+      "pass": "thonghh",
+      "pass1": "thonghh",
+      "address": "TB",
+      "id": 47
+    },
+    {
+      "gender": "1",
+      "fullname": "thongaa",
+      "name": "thongpz",
+      "email": "anhthong645@gmail.com",
+      "pass": "123123",
+      "pass1": "123123",
+      "address": "HaNoi",
+      "id": 48
+    },
+    {
+      "gender": "1",
+      "name": "thongpza",
+      "fullname": "Hoàng Trung Thông",
+      "email": "anhthong645@gmail.com",
+      "pass": "123123",
+      "pass1": "123123",
+      "address": "HaNoi",
+      "id": 49
     }
   ]
 }

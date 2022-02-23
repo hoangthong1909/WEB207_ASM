@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lab3</title>
+    <title>Home</title>
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
     <script src="https://kit.fontawesome.com/29b41ee1c8.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body ng-app="app">
     <div class="container">
         <header class="row">
             <div class="col-12">
@@ -76,17 +76,17 @@
                         </li>
                     </ul>
                     <!-- <span class="navbar-text p-0"> -->
-                    <li class="nav-item dropdown row">
+                    <li class="nav-item dropdown row" ng-controller="TableController">
                         <a class="nav-link dropdown-toggle bi bi-person-fill navbar-text" href="#"
                             id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            &nbsp;&nbsp;Tài khoản&nbsp;&nbsp;
+                            &nbsp;&nbsp;Xin Chào {{info.name}} &nbsp;&nbsp;
                         </a>
                         <ul class="dropdown-menu bg-secondary" aria-labelledby="navbarDropdownMenuLink">
                             <li><a class="dropdown-item responsive-font-example" href="dangki.html">Đăng Ký</a></li>
                             <li><a class="dropdown-item responsive-font-example" href="login1.html">Đăng Nhập</a></li>
                             <li><a class="dropdown-item responsive-font-example" href="quenmk.html">Quên Mật Khẩu</a></li>
                             <hr>
-                            <li><a class="dropdown-item responsive-font-example" href="login1.html">Đăng Xuất</a></li>
+                            <li><a class="dropdown-item responsive-font-example" ng-click="logout()" href="login1.html">Đăng Xuất</a></li>
                             <li><a class="dropdown-item responsive-font-example" href="doimatkhau.html">Đổi Mật Khẩu</a></li>
                             <li><a class="dropdown-item responsive-font-example" href="capnhat.html">Cập Nhập Tài Khoản</a></li>
                         </ul>
@@ -180,43 +180,43 @@
                         </div>
                         <ul class="list-group mt-0">
                             <li class="list-group-item ">
-                                <a class="text-decoration-none text-black " href="">Lập Trình Android nâng cao</a>
+                                <a class="text-decoration-none text-black " href="qiz.html">Lập Trình Android nâng cao</a>
                             </li>
                             <li class="list-group-item border border-top-1">
-                                <a class="text-decoration-none text-black" href="thitracnghiem.html">Xây dựng trang Web</a>
+                                <a class="text-decoration-none text-black" href="qiz.html">Xây dựng trang Web</a>
                             </li>
                             <li class="list-group-item">
-                                <a class="text-decoration-none text-black" href="">Cơ sở dữ liệu</a>
+                                <a class="text-decoration-none text-black" href="qiz.html">Cơ sở dữ liệu</a>
                             </li>
                             <li class="list-group-item">
-                                <a class="text-decoration-none text-black" href="">SQL Server</a>
+                                <a class="text-decoration-none text-black" href="qiz.html">SQL Server</a>
                             </li>
                             <li class="list-group-item" >
-                                <a class="text-decoration-none text-black " href="">Internet Marketing</a>
+                                <a class="text-decoration-none text-black " href="qiz.html">Internet Marketing</a>
                             </li>
                             <li class="list-group-item border border-top-1 ">
-                                <a class="text-decoration-none text-black " href="">Lập Trình hướng đối tượng với Java</a>
+                                <a class="text-decoration-none text-black " href="qiz.html">Lập Trình hướng đối tượng với Java</a>
                             </li>
                             <li class="list-group-item">
-                                <a class="text-decoration-none text-black" href="">Lập Trình PHP</a>
+                                <a class="text-decoration-none text-black" href="qiz.html">Lập Trình PHP</a>
                             </li>
                             <li class="list-group-item">
-                                <a class="text-decoration-none text-black" href="">Điện toán đám mây</a>
+                                <a class="text-decoration-none text-black" href="qiz.html">Điện toán đám mây</a>
                             </li>
                             <li class="list-group-item">
-                                <a class="text-decoration-none text-black" href="">Lập Trình Android cơ bản</a>
+                                <a class="text-decoration-none text-black" href="qiz.html">Lập Trình Android cơ bản</a>
                             </li>
                             <li class="list-group-item border border-top-1">
-                                <a class="text-decoration-none text-black " href="">Lập trình game 2D</a>
+                                <a class="text-decoration-none text-black " href="qiz.html">Lập trình game 2D</a>
                             </li>
                             <li class="list-group-item  ">
-                                <a class="text-decoration-none text-black" href="">Thiết Kế giao diện trên Android</a>
+                                <a class="text-decoration-none text-black" href="qiz.html">Thiết Kế giao diện trên Android</a>
                             </li>
                             <li class="list-group-item">
-                                <a class="text-decoration-none text-black" href="">Thiết Kế web cho điện thoại di động</a>
+                                <a class="text-decoration-none text-black" href="qiz.html">Thiết Kế web cho điện thoại di động</a>
                             </li>
                             <li class="list-group-item">
-                                <a class="text-decoration-none text-black" href="">Lập Trình ASP.NET</a>
+                                <a class="text-decoration-none text-black" href="qiz.html">Lập Trình ASP.NET</a>
                             </li>
                         </ul>
                     </div>
@@ -251,6 +251,14 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="controller/TableController.js"></script>
+    <script src="controller/FormController.js"></script>
+    <script src="js/angularjs.min.js"></script>
+    <script>
+        var app = angular.module("app", []);
+        app.controller("TableController", tableController);
+        app.controller("FormController", formController);
+    </script>
 </body>
 
 </html>

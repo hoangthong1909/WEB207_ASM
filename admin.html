@@ -103,10 +103,10 @@
                         </li>
                     </ul>
                     <!-- <span class="navbar-text p-0"> -->
-                    <li class="nav-item dropdown row">
+                    <li class="nav-item dropdown row" ng-controller="TableController">
                         <a class="nav-link dropdown-toggle bi bi-person-fill navbar-text" href="#"
                             id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            &nbsp;&nbsp;Tài khoản&nbsp;&nbsp;
+                            &nbsp;&nbsp;Xin Chào {{info.name}}&nbsp;&nbsp;
                         </a>
                         <ul class="dropdown-menu bg-secondary" aria-labelledby="navbarDropdownMenuLink">
                             <li><a class="dropdown-item responsive-font-example" href="dangki.html">Đăng Ký</a></li>
@@ -114,8 +114,8 @@
                             <li><a class="dropdown-item responsive-font-example" href="quenmk.html">Quên Mật Khẩu</a>
                             </li>
                             <hr>
-                            <li><a class="dropdown-item responsive-font-example" href="login1.html">Đăng Xuất</a></li>
-                            <li><a class="dropdown-item responsive-font-example" href="doimatkhau.html">Đổi Mật Khẩu</a>
+                            <li><a class="dropdown-item responsive-font-example" ng-click="logout()" href="login1.html">Đăng Xuất</a></li>
+                            <li><a class="dropdown-item responsive-font-example" ng-click="dmk()"  href="doimatkhau.html">Đổi Mật Khẩu</a>
                             </li>
                             <li><a class="dropdown-item responsive-font-example" href="capnhat.html">Cập Nhập Tài
                                     Khoản</a></li>

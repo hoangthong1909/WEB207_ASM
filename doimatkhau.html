@@ -75,17 +75,13 @@
                     <div class="row mb-3">
                         <label for="colFormLabel" class="col-xl-3 col-form-label">Tên Đăng Nhập</label>
                         <div class="col-xl-8">
-                          <input type="text" class="form-control" id="colFormLabel" placeholder="Nhập Tên Đăng Nhập">
-                          <div ng-hide="form_user.Name.$valid || form_user.Name.$untouched">
-                            <small class="form-text text-danger" ng-show="form_user.Name.$error.required">Vui lòng nhập
-                                Tên Tài Khoản</small>
-                        </div>
+                          <input type="text" class="form-control" id="colFormLabel" placeholder="Nhập Tên Đăng Nhập" readonly name="Name" ng-model="{{info.name}}" required>
                         </div>
                       </div>
                       <div class="row mb-3">
                         <label for="colFormLabel" class="col-xl-3 col-form-label">Mật Khẩu Hiện Tại</label>
                         <div class="col-xl-8">
-                          <input type="password" class="form-control" id="colFormLabel" placeholder="Nhập Mật Khẩu" name="pass" ng-model="sv.pass">
+                          <input type="password" class="form-control" id="colFormLabel" ng-minlength="6" placeholder="Nhập Mật Khẩu" name="pass" ng-model="sv.pass" required>
                           <div ng-hide="form_login.pass.$untouched || form_login.pass.$valid" class="text-danger">
                             <small ng-show="form_login.pass.$error.required">
                               Mật Khẩu Không được để trống
@@ -99,7 +95,7 @@
                       <div class="row mb-3">
                         <label for="colFormLabel" class="col-xl-3 col-form-label">Mật Khẩu Mới</label>
                         <div class="col-xl-8">
-                          <input type="password" class="form-control" id="colFormLabel" placeholder="Nhập Mật Khẩu Mới" name="pass1" ng-model="sv.pass1">
+                          <input type="password" class="form-control" id="colFormLabel" ng-minlength="6" placeholder="Nhập Mật Khẩu Mới" name="pass1" ng-model="sv.pass1" required>
                           <div ng-hide="form_login.pass1.$untouched || form_login.pass1.$valid" class="text-danger">
                             <small ng-show="form_login.pass1.$error.required">
                               Mật Khẩu Không được để trống
@@ -111,9 +107,9 @@
                         </div>
                       </div>
                       <div class="row mb-3">
-                        <label for="colFormLabel" class="col-xl-3 col-form-label">Xác Nhận</label>
+                        <label for="colFormLabel" class="col-xl-3 col-form-label">Xác Nhận Mật Khẩu</label>
                         <div class="col-xl-8">
-                          <input type="password" class="form-control" id="colFormLabel" placeholder="Xác Nhận Mật Khẩu Mới" name="pass2" ng-model="sv.pass2">
+                          <input type="password" class="form-control" id="colFormLabel" ng-minlength="6" placeholder="Xác Nhận Mật Khẩu Mới" name="pass2" ng-model="sv.pass2" required>
                           <div ng-hide="form_login.pass2.$untouched || form_login.pass2.$valid" class="text-danger">
                             <small ng-show="form_login.pass2.$error.required">
                               Mật Khẩu Không được để trống
@@ -127,7 +123,7 @@
             
                     <div class="mt-4 row g-3">
                         <label for="" class="col-4"></label>
-                        <button class="btn btn-success col-lg-3 " ng-click="onUpdate()">Xác Nhận</button>
+                        <button class="btn btn-success col-lg-3 " ng-click="changePassword()">Xác Nhận</button>
                     </div>
                 </form>
         </div>
@@ -212,10 +208,10 @@
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/angularjs.min.js"></script>
-    <script src="controller/changepass.js"></script>
+    <script src="controller/TableController.js"></script>
     <script>
         var app = angular.module("app", []);
-        app.controller("changepassword",changePassword);
+        app.controller("changepassword",tableController);
     </script>
 </body>
 

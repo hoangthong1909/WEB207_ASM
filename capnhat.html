@@ -116,10 +116,6 @@
                             </small>
                         </div>
                     </div>
-                    <div class="col-md-6">
-                        <label for="inputCity" class="form-label">Ngày Sinh</label>
-                        <input type="date" class="form-control" id="inputCity">
-                    </div>
                     <div class="col-md-6 mt-5 p-2">
                         <label for="exampleInputPassword1" class="form-label pe-4">Giới tính</label>
                         <input ng-model="sv.gender" value="1" type="radio" class="form-check-input ms-5" name="gender"
@@ -156,6 +152,21 @@
                                 Mật Khẩu Không được để trống
                             </small>
                             <small ng-show="form_login.password.$error.minlength">
+                                Mật Khẩu phải lớn hơn 6 kí tự
+                            </small>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <label for="inputCity" class="form-label"> Nhập Lại Mật Khẩu</label>
+                        <input type="password" class="form-control" placeholder="Password" aria-label="password"
+                            aria-describedby="addon-wrapping" name="pass1" ng-model="sv.pass1" ng-minlength="6"
+                            required>
+                        <div ng-hide="form_login.pass1.$untouched || form_login.pass1.$valid"
+                            class="text-danger">
+                            <small ng-show="form_login.pass1.$error.required">
+                                Mật Khẩu Không được để trống
+                            </small>
+                            <small ng-show="form_login.pass1.$error.minlength">
                                 Mật Khẩu phải lớn hơn 6 kí tự
                             </small>
                         </div>
@@ -255,22 +266,12 @@
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/angularjs.min.js"></script>
+    <script src="controller/TableController.js"></script>
+    <script src="controller/FormController.js"></script>
     <script>
-        const app = angular.module("app", []);
-
-        function myController($scope) {
-            console.log($scope.sv);
-            // $scope.sv = {
-            //     fullname: "",
-            //     password: "",
-            //     name: "",
-            //     email: "",
-            //     phone: "",
-            //     address: "",
-            // };
-        }
-
-        app.controller("my_controller", myController);
+        var app = angular.module("myApp", []);
+        app.controller("TableController", tableController);
+        app.controller("FormController", formController);
     </script>
 </body>
 
