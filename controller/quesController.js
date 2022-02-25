@@ -1,15 +1,20 @@
-function quesController($scope, $http) {
+function quesController($scope, $rootScope, $http) {
     const api = "http://localhost:3000/quizs";
     $scope.index = -1;
     $scope.indexCheckBox = 1;
     $scope.quizs = [];
-    $scope.tab = 0;
+    $rootScope.navtab = true;
     $http.get(api)
         .then(function (response) {
             $scope.quizs = response.data;
+            // for(var i=0; i<$scope.quizs.length;i++){
+            //     $scope.tab=$scope.quizs[i].id;    
+            //     $scope.tab=angular.toJson($scope.quizs[i].id);
+            //     console.log($scope.tab);
+            // }
             console.log($scope.quizs);
         });
-    $scope.onSelect = function (index) {
+    $scope.filltoForm = function (index) {
         console.log(index);
         $scope.index = index;
         $scope.quiz = angular.copy($scope.quizs[index]);
@@ -17,11 +22,11 @@ function quesController($scope, $http) {
         if ($scope.indexCheckBox = 1) {
             $scope.quiz.da1 = angular.copy($scope.quiz.da1);
         } else if ($scope.indexCheckBox = 2) {
-            $scope.quiz.da2= angular.copy($scope.quiz.da2);
+            $scope.quiz.da2 = angular.copy($scope.quiz.da2);
         } else if ($scope.indexCheckBox = 3) {
-            $scope.quiz.da3= angular.copy($scope.quiz.da3);
+            $scope.quiz.da3 = angular.copy($scope.quiz.da3);
         } else if ($scope.indexCheckBox = 4) {
-            $scope.quiz.da4= angular.copy($scope.quiz.da4);
+            $scope.quiz.da4 = angular.copy($scope.quiz.da4);
         }
     }
 
@@ -48,10 +53,8 @@ function quesController($scope, $http) {
         $scope.indexCheckBox = 1;
     }
 
-    $scope.onInsert = function () {
-        $scope.onFormSubmit = function (event) {
-            event.preventDefault();
-          }
+    $scope.onInsert = function (event) {
+        event.preventDefault();
         $scope.quiz.id = null;
         if ($scope.quiz.check == null) {
             alert("Vui Lòng chọn đáp án đúng")
@@ -61,20 +64,21 @@ function quesController($scope, $http) {
             .then(function (response) {
                 console.log(response.data);
                 alert("Thêm thành công!");
+                $scope.navtab = false;
             });
     }
     $scope.onFormSubmit = function (event) {
         event.preventDefault();
-      }
+    }
 
     $scope.onUpdate = function () {
         const apiUpdate = api + "/" + $scope.quiz.id;
         // $scope.quiz.id = null;
         $http.put(apiUpdate, $scope.quiz)
             .then(function (response) {
-                $scope.tab=0;
                 console.log(response.data);
                 alert("Sửa thành công!");
+                $scope.navtab = false;
             });
     }
 
@@ -84,7 +88,9 @@ function quesController($scope, $http) {
             .then(function (response) {
                 console.log(response)
                 alert("Xóa thành công!");
+                $scope.navtab = false;
             });
     }
+
 
 }

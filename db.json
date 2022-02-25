@@ -111,16 +111,6 @@
       "check": "2"
     },
     {
-      "text": "ABC",
-      "da1": "1",
-      "da2": "2",
-      "da3": "3",
-      "da4": "4",
-      "id": 13,
-      "da": "1",
-      "check": "1"
-    },
-    {
       "text": "ABCD",
       "da1": "1",
       "da2": "2",
@@ -141,7 +131,7 @@
       "id": 15
     },
     {
-      "text": "ABC",
+      "text": "ABCDD",
       "da1": "Remove",
       "da2": "Delete",
       "da3": "Del",
@@ -149,6 +139,26 @@
       "check": "2",
       "da": "Delete",
       "id": 16
+    },
+    {
+      "text": "Câu lệnh SQL nào được dùng để xóa dữ liệu trong database?",
+      "da1": "1",
+      "da2": "2",
+      "da3": "3",
+      "da4": "4",
+      "id": 17,
+      "da": "2",
+      "check": "2"
+    },
+    {
+      "text": "Câu lệnh SQL nào được dùng để xóa dữ liệu trong database?",
+      "da1": "Remove",
+      "da2": "Delete",
+      "da3": "Extract1",
+      "da4": "Backspace",
+      "id": 18,
+      "da": "Delete",
+      "check": "2"
     }
   ],
   "sv": [
@@ -164,16 +174,6 @@
       "name": "Admin"
     },
     {
-      "email": "sangngu123321@gmail.com",
-      "pass1": "123123",
-      "pass": "123123",
-      "fullname": "ngu1",
-      "gender": "1",
-      "address": "ngu111111111111111",
-      "id": 12,
-      "name": "thongpz"
-    },
-    {
       "email": "sangngu@gmail.com",
       "pass1": "123123",
       "pass": "123123",
@@ -182,16 +182,6 @@
       "address": "ngu111111111111111",
       "id": 13,
       "name": "thonghoang"
-    },
-    {
-      "gender": "1",
-      "name": "Trần Thị Huệ1",
-      "email": "thongprovip19092002@gmail.com",
-      "pass": "111111",
-      "pass1": "111111",
-      "address": "HaNoi",
-      "fullname": "Hoàng Trung Thôngaaaaaaa",
-      "id": 46
     },
     {
       "gender": "1",
@@ -222,6 +212,63 @@
       "pass1": "123123",
       "address": "HaNoi",
       "id": 49
+    },
+    {
+      "gender": "0",
+      "name": "thongpzzzz",
+      "email": "thonghh@gmail.com",
+      "fullname": "manhpro111",
+      "pass": "123123",
+      "pass1": "123123",
+      "address": "Ha Noi",
+      "id": 50
+    }
+  ],
+  "subject": [
+    {
+      "id": 1,
+      "text": "Xây dựng trang web",
+      "img": "HTCS.jpg"
+    },
+    {
+      "id": 2,
+      "text": "Cơ sở dữ liệu",
+      "img": "DBBS.png"
+    },
+    {
+      "id": 3,
+      "text": "Lập trình Javascript",
+      "img": "JSPR.png"
+    },
+    {
+      "id": 4,
+      "text": "Trò chơi con mực",
+      "img": "GAME.png"
+    },
+    {
+      "id": 5,
+      "text": "Lập trình ASP.NET",
+      "img": "ASNE.png"
+    },
+    {
+      "id": 6,
+      "text": "Lập trình PHP",
+      "img": "PHPP.png"
+    },
+    {
+      "id": 7,
+      "text": "Java OPP",
+      "img": "JAAV.png"
+    },
+    {
+      "id": 8,
+      "text": "Lập trình mobile",
+      "img": "ADBS.jpg"
+    },
+    {
+      "id": 9,
+      "text": "Lập trình Web",
+      "img": "WEBU.jpg"
     }
   ]
 }

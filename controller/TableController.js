@@ -27,6 +27,9 @@ function tableController($scope, $rootScope, $http) {
     $rootScope.sv = angular.copy($scope.students[index]);
     console.log($scope.students[index].id);
   }
+
+
+
   if(sessionStorage.getItem('isLogin')){
   $scope.login = true;
   $scope.info=angular.fromJson(sessionStorage.getItem('isLogin')) //chuyen chuoi Json sang thanh doi Tuong
