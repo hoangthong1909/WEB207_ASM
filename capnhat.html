@@ -11,8 +11,8 @@
     <script src="https://kit.fontawesome.com/29b41ee1c8.js" crossorigin="anonymous"></script>
 </head>
 
-<body ng-app="app">
-    <div class="container" ng-controller="my_controller">
+<body ng-app="myApp">
+    <div class="container" >
         <header class="row">
             <div class="col-12">
                 <img src="images/banner.png" class="img-fluid border-0 p-0 col-12">
@@ -74,10 +74,15 @@
                     <label for="" class="text-uppercase ">Cập Nhật Thông Tin</label>
                     <br>
                 </div>
-                <div class=" row alert alert-success">
+                <!-- <div class=" row alert alert-success">
                     Cập Nhật Thành Công
-                </div>
-                <form class="row g-3" name="form_login">
+                </div> -->
+                <form class="row g-3" name="form_login" ng-controller="tblcontroller">
+                    <div class="col-md-6">
+                        <label for="inputPassword4" class="form-label">Tài Khoản</label>
+                        <input type="text" class="form-control" id="inputPassword4 " 
+                            name="name" readonly ng-model="info.name" required>
+                    </div>
                     <div class="col-md-6">
                         <label for="inputEmail4" class="form-label">Họ Tên</label>
                         <input type="text" class="form-control" placeholder="Enter Name" aria-label="Enter Name"
@@ -93,19 +98,7 @@
                             </small>
                         </div>
                     </div>
-                    <div class="col-md-6">
-                        <label for="inputPassword4" class="form-label">Điện Thoại</label>
-                        <input type="tel" class="form-control" id="inputPassword4 " ng-pattern="/^[0-9]{10,10}$/"
-                            name="phone" ng-model="sv.phone" required>
-                        <div ng-hide="form_login.phone.$untouched || form_login.phone.$valid" class="text-danger">
-                            <small ng-show="form_login.phone.$error.required">
-                                Số Điện Thoại Không được để trống
-                            </small>
-                            <small ng-show="form_login.phone.$error.pattern">
-                                Số Điện Thoại không đúng định dạng
-                            </small>
-                        </div>
-                    </div>
+                   
                     <div class="col-12">
                         <label for="inputAddress" class="form-label">Địa Chỉ</label>
                         <input type="text" class="form-control" id="inputAddress" placeholder="Nhập địa chỉ"
@@ -171,10 +164,10 @@
                             </small>
                         </div>
                     </div>
-                    <div class="col-12">
-                        <button type="submit" class="btn btn-success mt-3">Cập Nhật</button>
-                    </div>
                 </form>
+                <div class="col-12" ng-controller="updatecontroller">
+                    <button type="submit" class="btn btn-success mt-3" ng-click="onUpdate()">Cập Nhật</button>
+                </div>
             </div>
             <div class="col-12 col-md-3 p-2 mt-2 ">
                 <div class="card ">
@@ -270,8 +263,8 @@
     <script src="controller/FormController.js"></script>
     <script>
         var app = angular.module("myApp", []);
-        app.controller("TableController", tableController);
-        app.controller("FormController", formController);
+        app.controller("updatecontroller", formController);
+        app.controller("tblcontroller", tableController);
     </script>
 </body>
 

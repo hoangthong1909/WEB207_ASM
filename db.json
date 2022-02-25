@@ -166,9 +166,9 @@
       "email": "thonghh@gmail.com",
       "pass1": "123123",
       "pass": "123123",
-      "fullname": "ngu12345",
+      "fullname": "HoangTrungThong",
       "gender": "1",
-      "address": "ngu1",
+      "address": "Hà Nội",
       "isAdmin": "Admin",
       "id": 8,
       "name": "Admin"
@@ -222,6 +222,16 @@
       "pass1": "123123",
       "address": "Ha Noi",
       "id": 50
+    },
+    {
+      "gender": "1",
+      "name": "thonghahhaa",
+      "fullname": "Hoàng Trung Thông",
+      "email": "anhthong645@gmail.com",
+      "pass": "123123",
+      "pass1": "123123",
+      "address": "HaNoi",
+      "id": 51
     }
   ],
   "subject": [
