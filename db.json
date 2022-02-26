@@ -1,16 +1,6 @@
 {
   "quizs": [
     {
-      "id": 1,
-      "text": "Câu 1. Câu lệnh SQL nào được dùng để truy xuất dữ liệu từ database?",
-      "da1": "Get",
-      "da2": "Open",
-      "da3": "Extract1",
-      "da4": "Select",
-      "check": "2",
-      "da": "Open"
-    },
-    {
       "id": 2,
       "text": "Câu 2. Câu lệnh SQL nào được dùng để cập nhật dữ liệu từ databdae?",
       "da1": "Get",
@@ -159,6 +149,144 @@
       "id": 18,
       "da": "Delete",
       "check": "2"
+    },
+    {
+      "text": "Câu lệnh SQL nào được dùng để xóa dữ liệu trong database?",
+      "da1": "1",
+      "da2": "2",
+      "da3": "3",
+      "da4": "4",
+      "check": "1",
+      "id": 19
+    },
+    {
+      "text": "Câu lệnh SQL nào được dùng để xóa dữ liệu trong database?",
+      "da1": "Get",
+      "da2": "Delete",
+      "da3": "Del",
+      "da4": "Backspace",
+      "check": "2",
+      "da": "Delete",
+      "id": 20
+    },
+    {
+      "text": "Câu lệnh SQL nào được dùng để xóa dữ liệu trong database?",
+      "da1": "Remove",
+      "da2": "Delete",
+      "da4": "Backspace",
+      "da3": "Del",
+      "da": "Del",
+      "check": "3",
+      "id": 21
+    },
+    {
+      "text": "Câu lệnh SQL nào được dùng để xóa dữ liệu trong database?",
+      "da1": "Remove",
+      "da2": "Delete",
+      "da3": "Del",
+      "da4": "Backspace",
+      "da": "Delete",
+      "check": "2",
+      "id": 22
+    },
+    {
+      "text": "Câu lệnh SQL nào được dùng để xóa dữ liệu trong database?",
+      "da1": "Remove",
+      "da2": "Delete",
+      "da3": "Extract1",
+      "da4": "Backspace",
+      "da": "Extract1",
+      "check": "3",
+      "id": 23
+    },
+    {
+      "text": "Câu lệnh SQL nào được dùng để xóa dữ liệu trong database?",
+      "da1": "Remove",
+      "da2": "Delete",
+      "da3": "Extract1",
+      "da4": "Backspace",
+      "check": "1",
+      "id": 24
+    },
+    {
+      "text": "Câu lệnh SQL nào được dùng để xóa dữ liệu trong database?",
+      "da1": "1",
+      "da2": "2",
+      "da3": "3",
+      "da4": "4",
+      "id": 25,
+      "da": "2",
+      "check": "2"
+    },
+    {
+      "text": "ABC",
+      "da1": "Remove",
+      "da2": "Open",
+      "da3": "Del",
+      "da4": "Backspace",
+      "da": "Backspace",
+      "check": "4",
+      "id": 26
+    },
+    {
+      "text": "AAAAAAAAAAAAAA",
+      "da1": "Remove",
+      "da2": "Delete",
+      "da3": "Del",
+      "da4": "Backspace",
+      "da": "Delete",
+      "check": "2",
+      "id": 27
+    },
+    {
+      "text": "Câu lệnh SQL nào được dùng để xóa dữ liệu trong database?",
+      "da1": "Remove",
+      "da2": "Delete",
+      "da3": "Extract1",
+      "da4": "Backspace",
+      "da": "Extract1",
+      "check": "3",
+      "id": 28
+    },
+    {
+      "text": "ABCDDDDDDDDD",
+      "da1": "Remove",
+      "da2": "Delete",
+      "da4": "Backspace",
+      "da3": "Del",
+      "da": "Del",
+      "check": "3",
+      "id": 29
+    },
+    {
+      "text": "Câu lệnh SQL nào được dùng để xóa dữ liệu trong database?",
+      "da1": "Remove",
+      "da2": "Delete",
+      "da3": "Del",
+      "da4": "Backspace111",
+      "da": "Delete",
+      "check": "2",
+      "id": 30
+    },
+    {
+      "text": "Câu lệnh SQL nào được dùng để xóa dữ liệu trong database?",
+      "da1": "Remove",
+      "da2": "Delete",
+      "da3": "Del",
+      "da4": "Backspace",
+      "da": "Delete",
+      "check": "2",
+      "id": 32
+    },
+    {
+      "text": "Câu lệnh SQL nào được dùng để xóa dữ liệu trong database?",
+      "da1": "Remove",
+      "da2": "Delete",
+      "da4": "Backspace",
+      "da3": "Extract1",
+      "id": 33,
+      "da": "Extract1",
+      "check": "3"
     }
   ],
   "sv": [
@@ -179,7 +307,7 @@
       "pass": "123123",
       "fullname": "ngu",
       "gender": "1",
-      "address": "ngu111111111111111",
+      "address": "ngu1111111111111111",
       "id": 13,
       "name": "thonghoang"
     },
@@ -232,6 +360,63 @@
       "pass1": "123123",
       "address": "HaNoi",
       "id": 51
+    },
+    {
+      "gender": "1",
+      "name": "thongpzz",
+      "email": "thanh2@gmail.com",
+      "fullname": "thanhpro",
+      "pass": "123123",
+      "pass1": "123123",
+      "address": "TB",
+      "id": 52
+    },
+    {
+      "gender": 1,
+      "isAdmin": 0,
+      "name": "thongne",
+      "fullname": "Thong hoang",
+      "email": "sangngu@gmail.com",
+      "pass1": "123123",
+      "pass": "123123",
+      "address": "ha Noi",
+      "id": 53
+    },
+    {
+      "gender": 1,
+      "isAdmin": 0,
+      "name": "thongne1",
+      "fullname": "Thong hoang",
+      "email": "sangngu@gmail.com",
+      "pass1": "123123",
+      "pass": "123123",
+      "address": "TB111",
+      "id": 54
+    },
+    {
+      "id": 55
+    },
+    {
+      "gender": 1,
+      "isAdmin": 0,
+      "name": "thongne123",
+      "fullname": "Thong hoang",
+      "email": "sangngu@gmail.com",
+      "pass1": "123123",
+      "pass": "123123",
+      "address": "TB",
+      "id": 56
+    },
+    {
+      "gender": "0",
+      "isAdmin": 0,
+      "name": "thongne1234",
+      "fullname": "Thong hoang",
+      "email": "sangngu1111@gmail.com",
+      "pass1": "123123",
+      "pass": "123123",
+      "address": "ha Noi",
+      "id": 57
     }
   ],
   "subject": [

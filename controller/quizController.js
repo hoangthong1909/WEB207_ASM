@@ -11,7 +11,7 @@ function quizController($scope, $rootScope, $http) {
         });
         $scope.final=function(){
             alert("Bạn Đã Trượt");
-          window.location = "http://127.0.0.1:5501/home.html";
+          window.location = "http://127.0.0.1:5501/index.html#/home";
         }
         
 }

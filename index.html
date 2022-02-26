@@ -5,14 +5,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>home</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
     <script src="https://kit.fontawesome.com/29b41ee1c8.js" crossorigin="anonymous"></script>
+    <style>
+        /* input.ng-valid {
+            border: 2px solid green;
+            border-radius: 4px;
+        } */
+
+        .loading {
+            background: rgba(0, 0, 0, .5);
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 999;
+        }
+
+        .spinner-center {
+            top: 50%;
+            left: 50%;
+            position: absolute;
+        }
+    </style>
 </head>
 
-<body ng-app="app">
-    <div class="container">
+<body ng-app="myApp">
+    <div class="container" ng-controller="indexController">
         <header class="row">
             <div class="col-12">
                 <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
@@ -51,7 +74,7 @@
                 </div>
             </div>
         </header>
-        <nav class="row navbar navbar-expand-lg navbar-dark bg-dark sticky-top m-0 p-1 " ng-controller="tablecontroller">
+        <nav class="row navbar navbar-expand-lg navbar-dark bg-dark sticky-top m-0 p-1 ">
             <div class="container-fluid">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#my-navbar"
                     aria-controls="my-navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -60,95 +83,52 @@
                 <div class="collapse navbar-collapse" id="my-navbar">
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item row ">
-                            <a class="nav-link bi bi-house-door-fill" href="home.html"> &nbsp;&nbsp;FPT Polytechnic
+                            <a class="nav-link bi bi-house-door-fill" href="#home"> &nbsp;&nbsp;FPT Polytechnic
                                 &nbsp;&nbsp;</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link bi bi-blockquote-left" href="gioithieu.html"> &nbsp;&nbsp;Giới thiệu&nbsp;&nbsp;</a>
+                            <a class="nav-link bi bi-blockquote-left" href="#introduce"> &nbsp;&nbsp;Giới
+                                thiệu&nbsp;&nbsp;</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link bi bi-telephone-fill" href="lienhe.html"> &nbsp;&nbsp;Liên hệ&nbsp;&nbsp;</a>
+                            <a class="nav-link bi bi-telephone-fill" href="#contact"> &nbsp;&nbsp;Liên
+                                hệ&nbsp;&nbsp;</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link bi bi-envelope" href="gopy.html"> &nbsp;&nbsp;Góp ý&nbsp;&nbsp;</a>
+                            <a class="nav-link bi bi-envelope" href="#feedback"> &nbsp;&nbsp;Góp ý&nbsp;&nbsp;</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link bi bi-question-circle-fill" href="hoidap.html">&nbsp;&nbsp;Hỏi đáp&nbsp;&nbsp;</a>
+                            <a class="nav-link bi bi-question-circle-fill" href="#qa">&nbsp;&nbsp;Hỏi
+                                đáp&nbsp;&nbsp;</a>
                         </li>
                     </ul>
                     <!-- <span class="navbar-text p-0"> -->
-                    <li class="nav-item dropdown row">
+                    <li class="nav-item dropdown row" >
                         <a class="nav-link dropdown-toggle bi bi-person-fill navbar-text" href="#"
                             id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             &nbsp;&nbsp;Xin Chào {{info.name}}&nbsp;&nbsp;
                         </a>
-                        <ul class="dropdown-menu bg-secondary" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item responsive-font-example" href="dangki.html">Đăng Ký</a></li>
-                            <li><a class="dropdown-item responsive-font-example" href="login1.html">Đăng Nhập</a></li>
-                            <li><a class="dropdown-item responsive-font-example" href="quenmk.html">Quên Mật Khẩu</a>
+                        <ul class="dropdown-menu bg-secondary"  aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item responsive-font-example"
+                                href="#login" ng-hide="login">Đăng Nhập</a></li>
+                                <li><a class="dropdown-item responsive-font-example"
+                                    href="#register" ng-hide="login">Đăng Ký</a></li>
+                            <li><a class="dropdown-item responsive-font-example" ng-show="login" ng-click="logout()"
+                                    href="#login">Đăng Xuất</a></li>
+                            <li><a class="dropdown-item responsive-font-example" ng-show="login" ng-click="checkinfo()"
+                                    href="#changepassword">Đổi Mật Khẩu</a>
                             </li>
-                            <hr>
-                            <li><a class="dropdown-item responsive-font-example" href="login1.html">Đăng Xuất</a></li>
-                            <li><a class="dropdown-item responsive-font-example" href="doimatkhau.html">Đổi Mật Khẩu</a>
-                            </li>
-                            <li><a class="dropdown-item responsive-font-example" href="capnhat.html">Cập Nhập Tài
+                            <li><a class="dropdown-item responsive-font-example"  href="#updateinfo" ng-show="login">Cập Nhập Tài
                                     Khoản</a></li>
                         </ul>
                     </li>
                 </div>
             </div>
         </nav>
-        <div class="row mt-3 p-1" ng-controller="homecontroller">
-            <div class="col-12 col-md-9 p-3 ">
-                    <div class="container" >
-                        <div class="row ">
-                            <div class="col-12 col-sm-4 mt-2" ng-repeat ="s in subjects | limitTo:9">
-                                <div class="card" >
-                                    <img  src="images/logos/{{s.img}}"
-                                        class="card-img-top" alt="...">
-                                    <div class="card-body bg-secondary text-dark bg-opacity-10">
-                                        <p class="card-text text-center">{{s.text}}</p>                                
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <nav aria-label="Page navigation example">
-                        <ul class="pagination d-flex justify-content-center mt-4">
-                          <li class="page-item">
-                            <a class="page-link" href="#" aria-label="Previous">
-                              <span aria-hidden="true">&laquo;</span>
-                            </a>
-                          </li>
-                          <li class="page-item"><a class="page-link" href="#">1</a></li>
-                          <li class="page-item"><a class="page-link" href="#">2</a></li>
-                          <li class="page-item"><a class="page-link" href="#">3</a></li>
-                          <li class="page-item">
-                            <a class="page-link" href="#" aria-label="Next">
-                              <span aria-hidden="true">&raquo;</span>
-                            </a>
-                          </li>
-                        </ul>
-                      </nav>
-            </div>
-            <div class="col-12 col-md-3 p-2 mt-3">
-                <div class="card ">
-                    <div class="border border-secondary">
-                        <div class="card-header">
-                            <b> <i class="fas fa-list-ul"></i>  DANH MỤC MÔN HỌC 
-                                <span  class="badge bg-danger rounded-pill ms-1">{{count}}</span></a></h5></b>
-                        </div>
-                        <ul class="list-group mt-0">
-                            <li class="list-group-item " ng-repeat ="s in subjects">
-                                <a class="text-decoration-none text-black " href="qiz.html">{{s.text}}</a>
-                            </li>
-                            
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <footer class="row bg-secondary ms-0 m-0">
+
+        <ng-view></ng-view>
+        
+        <footer class="row bg-secondary ms-0 me-0">
             <div class="col-sm-3">
                 <img src="https://phothongcaodang.fpt.edu.vn/wp-content/uploads/LOGO-PTC%C4%90-White-Transparency.png"
                     class="w-75 pt-2" alt="">
@@ -171,21 +151,19 @@
             </div>
         </footer>
     </div>
-
-    </div>
     <script src="js/jquery.min.js"></script>
-    <script src="js/angularjs.min.js"></script>
-    <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-  <script src="controller/homeController.js"></script>
-  <script src="controller/TableController.js"></script>
-  <script src="controller/quesController.js"></script>
-  <script>
-    var app = angular.module("app", []);
-    app.controller("homecontroller", homeController);
-    app.controller("q",quesController);
-    app.controller("tablecontroller",tableController);
-  </script>
+    <script src="js/angularjs.min.js"></script>
+    <script src="js/angular-route.js"></script>
+
+    <script src="controller/indexController.js"></script>
+    <script src="controller/registerController.js"></script>
+    <script src="controller/quizController.js"></script>
+    <script src="controller/FormController.js"></script>
+    <script src="controller/quesController.js"></script>
+    <script src="controller/homeController.js"></script>
+    <script src="controller/loginController.js"></script>
+    <script src="js/router.js"></script>
 </body>
 
 </html>

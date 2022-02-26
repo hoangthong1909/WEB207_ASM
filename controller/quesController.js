@@ -3,7 +3,6 @@ function quesController($scope, $rootScope, $http) {
     $scope.index = -1;
     $scope.indexCheckBox = 1;
     $scope.quizs = [];
-    $rootScope.navtab = true;
     $http.get(api)
         .then(function (response) {
             $scope.quizs = response.data;
@@ -53,8 +52,11 @@ function quesController($scope, $rootScope, $http) {
         $scope.indexCheckBox = 1;
     }
 
-    $scope.onInsert = function (event) {
+    $scope.onFormSubmit = function (event) {
         event.preventDefault();
+        
+    }
+    $scope.onInsert = function (event) {
         $scope.quiz.id = null;
         if ($scope.quiz.check == null) {
             alert("Vui Lòng chọn đáp án đúng")
@@ -63,12 +65,10 @@ function quesController($scope, $rootScope, $http) {
         $http.post(api, $scope.quiz)
             .then(function (response) {
                 console.log(response.data);
-                alert("Thêm thành công!");
-                $scope.navtab = false;
+                //  alert("Thêm thành công!");
+             
             });
-    }
-    $scope.onFormSubmit = function (event) {
-        event.preventDefault();
+            event.preventDefault();
     }
 
     $scope.onUpdate = function () {

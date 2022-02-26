@@ -1,0 +1,57 @@
+<div>
+  <div class="row mt-5 mb-5">
+    <div class="col-sm-4 offset-4  rounded-3 bg-primary bg-opacity-25 pb-5 px-4">
+      <div class="row">
+        <div class="text-center mt-2 mb-2">
+          <img src="images/1350149.png" class="w-25 mb-2 mt-3" alt="">
+          <h5 class="text-uppercase text-secondary">Đăng nhập</h5>
+        </div>
+        <div class="alert {{ isSuccess ? '' : 'alert-danger' }}" ng-if="message.length != 0">
+          {{ message }}
+        </div>
+        <form name="formLogin">
+          <div class="row mb-4">
+            <div>
+              <label for="user" class="form-label">Tên Đăng Nhập</label>
+              <input type="text" id="user" name="txtname" ng-model="user.name" ng-minlength="5" ng-maxlength="25"
+                class="form-control" aria-label="Recipient's username" aria-describedby="basic-addon2" required>
+            </div>
+            <div ng-hide="formLogin.txtname.$valid || formLogin.txtname.$untouched">
+              <small class="form-text text-danger" ng-show="formLogin.txtname.$error.required">Vui lòng nhập
+                Tên Đăng Nhập</small>
+              <small class="form-text text-danger"
+                ng-show="formLogin.txtname.$error.minlength || formLogin.txtname.$error.maxlength">Tên đăng nhập ít nhất
+                5 kí tự và nhỏ hơn 25 kí tự</small>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div>
+              <label for="exampleInputPassword1" class="form-label">Mật khẩu</label>
+              <input type="password" ng-minlength="6" ng-maxlength="32" class="form-control" name="txtPass"
+                ng-model="user.pass" id="exampleInputPassword1" required>
+            </div>
+            <div ng-hide="formLogin.txtPass.$valid || formLogin.txtPass.$untouched">
+              <small class="form-text text-danger" ng-show="formLogin.txtPass.$error.required">Vui lòng nhập mật
+                khẩu!</small>
+              <small class="form-text text-danger"
+                ng-show="formLogin.txtPass.$error.minlength || formLogin.txtPass.$error.maxlength">Mật khẩu có độ
+                dài 6 -32 ký tự!</small>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col-4 offset-8">
+              <a class="text-end text-decoration-none" href="#router/quenmk">Quên mật khẩu</a>
+            </div>
+          </div>
+          <div class="text-center">
+            <button ng-click="isLogin()" class="btn btn-primary mt-0  ">Đăng nhập</button>
+            <p class=" mt-3">
+              Bạn chưa có tài khoản ? <a href="#register" class="loginhere-link text-decoration-none">Đăng ký
+                ngay</a>
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

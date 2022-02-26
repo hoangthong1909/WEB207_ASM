@@ -1,0 +1,104 @@
+
+        <div class="row mt-0 ms-0 me-0 p-1">
+            <div class="col-12 bg-light ">
+                <div class="text-center text-danger fs-3 ">
+                    <label for="" class="text-uppercase mt-3 ">Cập Nhật Thông Tin</label>
+                    <br>
+                </div>
+                <!-- <div class=" row alert alert-success">
+                    Cập Nhật Thành Công
+                </div> -->
+                <form class="row g-3" name="form_login">
+                    <div class="col-md-6">
+                        <label for="inputPassword4" class="form-label">Tài Khoản</label>
+                        <input type="text" class="form-control" id="inputPassword4 " 
+                            name="name" readonly ng-model="info.name" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="inputEmail4" class="form-label">Họ Tên</label>
+                        <input type="text" class="form-control" placeholder="Enter Name" aria-label="Enter Name"
+                            aria-describedby="addon-wrapping" ng-model="info.fullname" name="fullname" ng-minlength="5"
+                            ng-maxlength="25" id="fullname" required>
+                        <div ng-hide="form_login.fullname.$untouched || form_login.fullname.$valid" class="text-danger">
+                            <small ng-show="form_login.fullname.$error.required">
+                                Họ Tên Không được để trống
+                            </small>
+                            <small
+                                ng-show="form_login.fullname.$error.minlength || form_login.fullname.$error.maxlength ">
+                                Họ Tên phải lớn hơn 5 kí tự và nhỏ hơn 25 kí tự
+                            </small>
+                        </div>
+                    </div>
+                   
+                    <div class="col-12">
+                        <label for="inputAddress" class="form-label">Địa Chỉ</label>
+                        <input type="text" class="form-control" id="inputAddress" placeholder="Nhập địa chỉ"
+                            name="address" ng-model="info.address" required>
+                        <div ng-hide="form_login.address.$untouched || form_login.address.$valid" class="text-danger">
+                            <small ng-show="form_login.address.$error.required">
+                                Địa Chỉ Không được để trống
+                            </small>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mt-5 p-2">
+                        <label for="exampleInputPassword1" class="form-label pe-4">Giới tính</label>
+                        <input ng-model="info.gender" ng-checked="info.gender == 1" ng value="1" type="radio" class="form-check-input ms-5" name="gender"
+                            id="genNam">
+                        <label class="form-check-label pe-3" for="genNam">Nam</label>
+                        <input ng-model="info.gender" value="0" type="radio" class="form-check-input " name="gender"
+                            id="genNu">
+                        <label class="form-check-label" for="genNu">Nữ</label>
+                    </div>
+                    <div class="col-6">
+                        <label for="inputAddress2" class="form-label">Email</label>
+                        <div class="input-group ">
+                            <input type="email" placeholder="Enter Email" class="form-control" name="email" id="email" ng-model="info.email" autocomplete="off"
+                            required />
+                        </div>
+                        <div ng-hide="form_login.email.$untouched || form_login.email.$valid" class="text-danger mt-1">
+                          <small ng-show="form_login.email.$error.required">
+                            Không được để trống
+                          </small>
+        
+                          <small ng-show="form_login.email.$error.email">
+                            Sai định dạng email
+                          </small>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <label for="inputCity" class="form-label">Mật Khẩu</label>
+                        <input type="password" class="form-control" placeholder="Password" aria-label="password"
+                            aria-describedby="addon-wrapping" name="password" readonly ng-model="info.pass" ng-minlength="6"
+                            required>
+                        <div ng-hide="form_login.password.$untouched || form_login.password.$valid"
+                            class="text-danger">
+                            <small ng-show="form_login.password.$error.required">
+                                Mật Khẩu Không được để trống
+                            </small>
+                            <small ng-show="form_login.password.$error.minlength">
+                                Mật Khẩu phải lớn hơn 6 kí tự
+                            </small>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <label for="inputCity" class="form-label"> Nhập Lại Mật Khẩu</label>
+                        <input type="password" class="form-control" readonly placeholder="Password" aria-label="password"
+                            aria-describedby="addon-wrapping" name="pass1" ng-model="info.pass1" ng-minlength="6"
+                            required>
+                        <div ng-hide="form_login.pass1.$untouched || form_login.pass1.$valid"
+                            class="text-danger">
+                            <small ng-show="form_login.pass1.$error.required">
+                                Mật Khẩu Không được để trống
+                            </small>
+                            <small ng-show="form_login.pass1.$error.minlength">
+                                Mật Khẩu phải lớn hơn 6 kí tự
+                            </small>
+                        </div>
+                    </div>
+                    <div class="col-12 text-center mb-5">
+                        <button type="submit" class="btn btn-success mt-3" ng-click="updateInfo()">Cập Nhật</button>
+                    </div>
+                </form>
+            </div>
+           
+            </div>

@@ -1,12 +1,38 @@
 
-const api1 = "http://localhost:3000/sv";
-function formController($scope, $rootScope, $http) {
-  $rootScope.index = -1;
-  $rootScope.sv = { gender: "1" };
+const api = "http://localhost:3000/sv";
+function formController($scope, $http) {
+  $scope.students = [];
+  $scope.isLoading = false;
+  $scope.isSuccess = true;
+  $scope.message = "";
+  $scope.index = -1;
+  $scope.sv = { gender: "1"};
+
 
   $scope.onFormSubmit = function (event) {
     event.preventDefault();
   }
+  $scope.isLoading = true;
+  $http.get(api) // Gửi 1 request GET tới API
+    .then(function (response) { // Phản hồi của API
+      $scope.students = response.data;
+      console.log(response);
+      $scope.isLoading = false;
+    })
+    .catch(function (error) {
+      console.log(error);
+      $scope.isLoading = false;
+    });
+
+
+  $scope.filltoForm = function (index) {
+    Update = api + "/" + $scope.students[index].id;
+    console.log(Update);
+    $scope.index = index;
+    $scope.sv = angular.copy($scope.students[index]);
+    console.log($scope.students[index].id);
+  }
+
   $scope.onInsert = function () {
     console.log($scope.sv);
     if ($scope.sv.fullname != null &&
@@ -17,11 +43,11 @@ function formController($scope, $rootScope, $http) {
       $scope.sv.address != null) {
       if ($scope.sv.pass == $scope.sv.pass1) {
         $scope.sv.id = null;
-        $http.post(api1, $scope.sv)
+        $http.post(api, $scope.sv)
           .then(function (response) {
             console.log(response);
             $scope.message = "Thêm mới thành công";
-            $rootScope.isSuccess = true;
+            $scope.isSuccess = true;
             alert("Thêm Mới Thành Công");
           })
       } else {
@@ -51,7 +77,7 @@ function formController($scope, $rootScope, $http) {
   }
 
   $scope.onClear = function () {
-    $rootScope.index = -1;
-    $rootScope.sv = { gender: "1" };
+    $scope.index = -1;
+    $scope.sv = { gender: "1" };
   }
 }

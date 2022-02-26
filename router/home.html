@@ -1,0 +1,51 @@
+
+        <div class="row mt-3">
+            <div class="col-12 col-md-9 p-3 ">
+                    <div class="container" >
+                        <div class="row ">
+                            <div class="col-12 col-sm-4 mt-2" ng-repeat ="s in subjects | limitTo:9">
+                                <div class="card" >
+                                    <img  src="images/logos/{{s.img}}"
+                                        class="card-img-top" alt="...">
+                                    <div class="card-body bg-secondary text-dark bg-opacity-10">
+                                        <p class="card-text text-center">{{s.text}}</p>                                
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination d-flex justify-content-center mt-4">
+                          <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Previous">
+                              <span aria-hidden="true">&laquo;</span>
+                            </a>
+                          </li>
+                          <li class="page-item"><a class="page-link" href="#">1</a></li>
+                          <li class="page-item"><a class="page-link" href="#">2</a></li>
+                          <li class="page-item"><a class="page-link" href="#">3</a></li>
+                          <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Next">
+                              <span aria-hidden="true">&raquo;</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </nav>
+            </div>
+            <div class="col-12 col-md-3 p-2 mt-3">
+                <div class="card ">
+                    <div class="border border-secondary">
+                        <div class="card-header">
+                            <b> <i class="fas fa-list-ul"></i>  DANH MỤC MÔN HỌC 
+                                <span  class="badge bg-danger rounded-pill ms-1">{{count}}</span></a></h5></b>
+                        </div>
+                        <ul class="list-group mt-0">
+                            <li class="list-group-item " ng-repeat ="s in subjects">
+                                <a class="text-decoration-none text-black " href="#qiz">{{s.text}}</a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>

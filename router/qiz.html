@@ -1,0 +1,106 @@
+
+    <div class="row mt-2" >
+      <div class="">
+        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Modal">Kết Thúc Bài Làm</button>
+        <div class="modal fade" id="Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Xác nhận</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" ></button>
+              </div>
+              <div class="modal-body">
+                Bạn có muốn nộp bài không?
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal" ng-click="final()">Xác nhận</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row ms-0 me-0" >
+      <article class="col-12 mt-3 " ng-show="!check">
+        <div class="row">
+          <div class="card p-0">
+            <div class="card-header">
+              <h5 class="card-title text-uppercase mb-0 "><i class="bi bi-book-fill text-danger"></i> Cơ sở dữ
+                liệu</h5>
+            </div>
+    
+            <div class="card-body">
+              <div class="row" ng-repeat="q in quizs | limitTo:1:start">
+                <p class="ps-4">Câu {{start+ 1}}. {{q.text}}</p>
+                <hr>
+                <div class="row ps-5">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" value="{{q.da1}}" ng-dirty="" ng-model="quiz.ques"
+                      name="flexRadioDefault" id="rd1">
+                    <label class="form-check-label" for="rd1">
+                      {{q.da1}}
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" value="{{q.da2}}" ng-dirty="" ng-model="quiz.ques"
+                      name="flexRadioDefault" id="rd2">
+                    <label class="form-check-label" for="rd2">
+                      {{q.da2}}
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" value="{{q.da3}}" ng-dirty="" ng-model="quiz.ques"
+                      name="flexRadioDefault" id="rd3">
+                    <label class="form-check-label" for="rd3">
+                      {{q.da3}}
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" value="{{q.da4}}" ng-dirty="" ng-model="quiz.ques"
+                      name="flexRadioDefault" id="rd4">
+                    <label class="form-check-label" for="rd4">
+                      {{q.da4}}
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+        <div class="row mt-2">
+          <nav aria-label="...">
+            <ul class="pagination justify-content-center">
+              <li class="page-item">
+                <button class="page-link" ng-click="start= 0">1</button>
+              </li>
+              <li class="page-item">
+                <button class="page-link" ng-click="start= 1">2</button>
+              </li>
+              <li class="page-item">
+                <button class="page-link" ng-click="start= 2">3</button>
+              </li>
+              <li class="page-item">
+                <button class="page-link" ng-click="start= 3">4</button>
+              </li>
+              <li class="page-item">
+                <button class="page-link" ng-click="start= 4">5</button>
+              </li>
+              <li class="page-item">
+                <button class="page-link" ng-click="start= 5">6</button>
+              </li>
+              <li class="page-item">
+                <button class="page-link" ng-click="start= 6">7</button>
+              </li>
+              <li class="page-item">
+                <button class="page-link" ng-click="start= 7">8</button>
+              </li>
+              <li class="page-item">
+                <button class="page-link" ng-click="start= 8">9</button>
+              </li>
+              <li class="page-item">
+                <button class="page-link" ng-click="start= 9">10</button>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </article>
+    </div>
