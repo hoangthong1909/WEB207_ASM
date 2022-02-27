@@ -1,122 +1,122 @@
 <ul class="nav justify-content-center">
     <li class="nav-item">
-      <a class="nav-link" href="#user">TÀI KHOẢN</a>
+        <a class="nav-link" href="#user">TÀI KHOẢN</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#question">CÂU HỎI</a>
+        <a class="nav-link" href="#question">CÂU HỎI</a>
     </li>
-  </ul>
-<div class="row bg-light ms-0 me-0" >
-<form class="row g-3" name="formQuiz" ng-sumit="onInsert($event)" >
-    <div class="col-12">
-        <label for="inputEmail4" class="form-label fw-bold">Câu Hỏi</label>
-        <input type="text" class="form-control" name="txtQues" id="exampleInputEmail1"
-            ng-model="quiz.text" aria-describedby="emailHelp" required>
-        <div ng-hide="formQuiz.txtQues.$valid || formQuiz.txtQues.$untouched">
-            <small class="text-danger" ng-show="formQuiz.txtQues.$error.required">Vui lòng nhập câu
-                hỏi!</small>
-        </div>
+</ul>
+<div class="row bg-light ms-0 me-0">
+    <div class="alert {{ isSuccess ? 'alert-success' : 'alert-danger' }}" ng-if="message.length != 0">
+        {{ message }}
     </div>
-    <div class="col-md-6">
-        <label for="inputPassword4" class="form-label">Đáp án A</label>
-        <input type="text" name="txtAs1" class="form-control" id="aw1" ng-model="quiz.da1"
-            required>
-        <div ng-hide="formQuiz.txtAs1.$valid || formQuiz.txtAs1.$untouched">
-            <small class="text-danger" ng-show="formQuiz.txtAs1.$error.required">Vui lòng nhập câu
-                trả lời!</small>
+    <form class="row g-3" name="formQuiz" action="" method="post" ng-submit="onInsert($event)">
+        <div class="col-12">
+            <label for="inputEmail4" class="form-label fw-bold">Câu Hỏi</label>
+            <input type="text" class="form-control" name="txtQues" id="exampleInputEmail1" ng-model="quiz.text"
+                aria-describedby="emailHelp" required>
+            <div ng-hide="formQuiz.txtQues.$valid || formQuiz.txtQues.$untouched">
+                <small class="text-danger" ng-show="formQuiz.txtQues.$error.required">Vui lòng nhập câu
+                    hỏi!</small>
+            </div>
         </div>
-    </div>
-    <div class="col-md-6">
-        <label for="inputPassword4" class="form-label">Đáp án B</label>
-        <input type="text" name="txtAs2" class="form-control" id="aw2" ng-model="quiz.da2"
-            required>
-        <div ng-hide="formQuiz.txtAs2.$valid || formQuiz.txtAs2.$untouched">
-            <small class="text-danger" ng-show="formQuiz.txtAs2.$error.required">Vui lòng nhập câu
-                trả lời!</small>
+        <div class="col-md-6">
+            <label for="inputPassword4" class="form-label">Đáp án A</label>
+            <input type="text" name="txtAs1" class="form-control" id="aw1" ng-model="quiz.da1" required>
+            <div ng-hide="formQuiz.txtAs1.$valid || formQuiz.txtAs1.$untouched">
+                <small class="text-danger" ng-show="formQuiz.txtAs1.$error.required">Vui lòng nhập câu
+                    trả lời!</small>
+            </div>
         </div>
-    </div>
-    <div class="col-md-6">
-        <label for="inputPassword4" class="form-label">Đáp án C</label>
-        <input type="text" class="form-control" id="aw3" name="txtAs3" ng-model="quiz.da3" required>
-        <div ng-hide="formQuiz.txtAs3.$valid || formQuiz.txtAs3.$untouched">
-            <small class="text-danger" ng-show="formQuiz.txtAs3.$error.required">Vui lòng nhập câu
-                trả lời!</small>
+        <div class="col-md-6">
+            <label for="inputPassword4" class="form-label">Đáp án B</label>
+            <input type="text" name="txtAs2" class="form-control" id="aw2" ng-model="quiz.da2" required>
+            <div ng-hide="formQuiz.txtAs2.$valid || formQuiz.txtAs2.$untouched">
+                <small class="text-danger" ng-show="formQuiz.txtAs2.$error.required">Vui lòng nhập câu
+                    trả lời!</small>
+            </div>
         </div>
-    </div>
-    <div class="col-md-6">
-        <label for="inputPassword4" class="form-label">Đáp án D</label>
-        <input type="text" class="form-control" id="aw4" name="txtAs4" ng-model="quiz.da4" required>
-        <div ng-hide="formQuiz.txtAs4.$valid || formQuiz.txtAs4.$untouched">
-          <small class="text-danger" ng-show="formQuiz.txtAs4.$error.required">Vui lòng nhập câu trả lời!</small>
+        <div class="col-md-6">
+            <label for="inputPassword4" class="form-label">Đáp án C</label>
+            <input type="text" class="form-control" id="aw3" name="txtAs3" ng-model="quiz.da3" required>
+            <div ng-hide="formQuiz.txtAs3.$valid || formQuiz.txtAs3.$untouched">
+                <small class="text-danger" ng-show="formQuiz.txtAs3.$error.required">Vui lòng nhập câu
+                    trả lời!</small>
+            </div>
         </div>
-    </div>
-    <div class="mt-5 ">
-        <label for="exampleInputPassword1" class="form-label pe-4">Đáp Án Đúng :</label>
-        <input type="radio" ng-model="quiz.check" value="1" ng-click="click1()"
-            ng-checked="quiz.check == 1" class="form-check-input" >
+        <div class="col-md-6">
+            <label for="inputPassword4" class="form-label">Đáp án D</label>
+            <input type="text" class="form-control" id="aw4" name="txtAs4" ng-model="quiz.da4" required>
+            <div ng-hide="formQuiz.txtAs4.$valid || formQuiz.txtAs4.$untouched">
+                <small class="text-danger" ng-show="formQuiz.txtAs4.$error.required">Vui lòng nhập câu trả
+                    lời!</small>
+            </div>
+        </div>
+        <div class="mt-5 ">
+            <label for="exampleInputPassword1" class="form-label pe-4">Đáp Án Đúng :</label>
+            <input type="radio" ng-model="quiz.check" value="1" ng-click="click1()" ng-checked="quiz.check == 1"
+                class="form-check-input">
 
-        <label class="form-check-label pe-4 " for="genNam">A</label>
-        <input type="radio" ng-model="quiz.check" value="2" ng-click="click2()"
-            ng-checked="quiz.check == 2" class="form-check-input" >
+            <label class="form-check-label pe-4 " for="genNam">A</label>
+            <input type="radio" ng-model="quiz.check" value="2" ng-click="click2()" ng-checked="quiz.check == 2"
+                class="form-check-input">
 
-        <label class="form-check-label pe-4 " for="genNam">B</label><input type="radio"
-            ng-model="quiz.check" value="3" ng-click="click3()"
-            ng-checked="quiz.check == 3" class="form-check-input" >
+            <label class="form-check-label pe-4 " for="genNam">B</label><input type="radio" ng-model="quiz.check"
+                value="3" ng-click="click3()" ng-checked="quiz.check == 3" class="form-check-input">
 
-        <label class="form-check-label pe-4 " for="genNam">C</label><input type="radio"
-            ng-model="quiz.check" value="4" ng-click="click4()"
-            ng-checked="quiz.check == 4" class="form-check-input" >
-        <label class="form-check-label pe-4 " for="genNam">D</label>
-        <div class="mt-3" >
-            <button type="button" ng-click="onInsert($event)" ng-hide="index != -1" class="btn btn-primary">Thêm</button>
-            <button type="button" ng-click="onUpdate()" ng-hide="index == -1" class="btn btn-primary">Sửa</button>
-            <button type="button" class="btn btn-primary" ng-hide="index == -1" data-bs-toggle="modal"
-                data-bs-target="#exampleModal1">Xóa</button>
-            <div id="exampleModal1" class="modal" tabindex="-1">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h3 class="modal-title">Xác nhận</h3>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <h5>Bạn có muốn xóa câu hỏi này?</h5>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-danger" ng-click="onDelete()"
-                                data-bs-dismiss="modal">Xác
-                                nhận</button>
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
-                                aria-label="Close">Hủy</button>
+            <label class="form-check-label pe-4 " for="genNam">C</label><input type="radio" ng-model="quiz.check"
+                value="4" ng-click="click4()" ng-checked="quiz.check == 4" class="form-check-input">
+            <label class="form-check-label pe-4 " for="genNam">D</label>
+            <div class="mt-3">
+                <button ng-hide="index != -1" class="btn btn-primary">Thêm</button>
+                <button type="button" ng-click="onUpdate()" ng-hide="index == -1" class="btn btn-primary">Sửa</button>
+                <button type="button" class="btn btn-primary" ng-hide="index == -1" data-bs-toggle="modal"
+                    data-bs-target="#exampleModal1">Xóa</button>
+                <div id="exampleModal1" class="modal" tabindex="-1">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3 class="modal-title">Xác nhận</h3>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <h5>Bạn có muốn xóa câu hỏi này?</h5>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" ng-click="onDelete()"
+                                    data-bs-dismiss="modal">Xác
+                                    nhận</button>
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                                    aria-label="Close">Hủy</button>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <button type="submit" ng-click="onClear()" class="btn btn-primary">Làm mới</button>
             </div>
-            <button type="submit" ng-click="onClear()" class="btn btn-primary">Làm mới</button>
-        </div>
     </form>
-  
-<table class="table table-striped table-success table-hover mt-3 " >
-<thead>
-    <tr>
-        <th>Câu hỏi</th>
-        <th>Đáp án 1</th>
-        <th>Đáp án 2</th>
-        <th>Đáp án 3</th>
-        <th>Đáp án 4</th>
-        <th>Đáp án đúng</th>
-    </tr>
-</thead>
-<tbody>
-    <tr ng-click="filltoForm($index)" ng-repeat="q in quizs">
-        <td>{{q.text}}</td>
-        <td>{{q.da1}}</td>
-        <td>{{q.da2}}</td>
-        <td>{{q.da3}}</td>
-        <td>{{q.da4}}</td>
-        <td>{{q.da}}</td>
-    </tr>
-</tbody>
-</table>
+
+    <table class="table table-striped table-success table-hover mt-3 ">
+        <thead>
+            <tr>
+                <th>Câu hỏi</th>
+                <th>Đáp án 1</th>
+                <th>Đáp án 2</th>
+                <th>Đáp án 3</th>
+                <th>Đáp án 4</th>
+                <th>Đáp án đúng</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-click="filltoForm($index)" ng-repeat="q in quizs">
+                <td>{{q.text}}</td>
+                <td>{{q.da1}}</td>
+                <td>{{q.da2}}</td>
+                <td>{{q.da3}}</td>
+                <td>{{q.da4}}</td>
+                <td>{{q.da}}</td>
+            </tr>
+        </tbody>
+    </table>
 </div>

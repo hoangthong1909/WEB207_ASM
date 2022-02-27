@@ -1,7 +1,10 @@
-function quizController($scope, $rootScope, $http) {
+function quizController($scope,$location, $http) {
     $scope.quizs = [];
     $scope.start = 0;
     $scope.check = false;
+    $scope.goto =function(path){
+        $location.path(path);
+    }
 
     const api = "http://localhost:3000/quizs";
     $http.get(api)
@@ -11,7 +14,7 @@ function quizController($scope, $rootScope, $http) {
         });
         $scope.final=function(){
             alert("Bạn Đã Trượt");
-          window.location = "http://127.0.0.1:5501/index.html#/home";
+         $scope.goto("home");
         }
         
 }

@@ -1,5 +1,8 @@
-function loginController($scope, $rootScope, $http) {
+function loginController($scope, $rootScope, $http,$location) {
     $scope.students = [];
+    $scope.goto =function(path){
+        $location.path(path);
+    }
     $scope.message="";
     const api = "http://localhost:3000/sv";
     $http.get(api) // Gửi 1 request GET tới API
@@ -16,9 +19,10 @@ function loginController($scope, $rootScope, $http) {
             if (name == $scope.students[i].name &&
                 password == $scope.students[i].pass) {
                 if ($scope.students[i].isAdmin == "Admin") {
-                    window.location = "http://127.0.0.1:5501/index.html#/user";
+                    $scope.goto("user");
+                   
                 } else {
-                    window.location = "http://127.0.0.1:5501/index.html#/home";
+                    $scope.goto("home");
                 }
                 return $scope.students[i];
             }

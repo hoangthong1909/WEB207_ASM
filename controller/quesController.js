@@ -2,6 +2,8 @@ function quesController($scope, $rootScope, $http) {
     const api = "http://localhost:3000/quizs";
     $scope.index = -1;
     $scope.indexCheckBox = 1;
+    $scope.isSuccess = false;
+    $scope.message = "";
     $scope.quizs = [];
     $http.get(api)
         .then(function (response) {
@@ -52,11 +54,8 @@ function quesController($scope, $rootScope, $http) {
         $scope.indexCheckBox = 1;
     }
 
-    $scope.onFormSubmit = function (event) {
-        event.preventDefault();
-        
-    }
     $scope.onInsert = function (event) {
+        event.preventDefault();
         $scope.quiz.id = null;
         if ($scope.quiz.check == null) {
             alert("Vui Lòng chọn đáp án đúng")
@@ -65,10 +64,10 @@ function quesController($scope, $rootScope, $http) {
         $http.post(api, $scope.quiz)
             .then(function (response) {
                 console.log(response.data);
-                //  alert("Thêm thành công!");
-             
+                $scope.message = "Thêm thành công";
+                $scope.isSuccess = true;
+
             });
-            event.preventDefault();
     }
 
     $scope.onUpdate = function () {
@@ -77,8 +76,8 @@ function quesController($scope, $rootScope, $http) {
         $http.put(apiUpdate, $scope.quiz)
             .then(function (response) {
                 console.log(response.data);
-                alert("Sửa thành công!");
-                $scope.navtab = false;
+                $scope.message = "Sửa thành công";
+                $scope.isSuccess = true;
             });
     }
 
@@ -87,8 +86,8 @@ function quesController($scope, $rootScope, $http) {
         $http.delete(apiDelete, $scope.quiz)
             .then(function (response) {
                 console.log(response)
-                alert("Xóa thành công!");
-                $scope.navtab = false;
+                $scope.message = "Xóa thành công";
+                $scope.isSuccess = true;
             });
     }
 

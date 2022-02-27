@@ -1,9 +1,12 @@
-function registerController($scope, $http) {
+function registerController($scope, $http,$location) {
     const api = "http://localhost:3000/sv"
     $scope.sv = {
         gender: 1,
         isAdmin: 0,
     }
+    $scope.goto =function(path){
+      $location.path(path);
+  }
 
     $scope.onRegister = function () {
         if ($scope.sv.fullname != null &&
@@ -18,7 +21,7 @@ function registerController($scope, $http) {
               .then(function (response) {
                 console.log(response);
                 alert("Đăng Kí Thành Công");
-                window.location = "http://127.0.0.1:5501/index.html#/login";
+                $scope.goto("login");
               })
           } else {
             alert("Mật Khẩu không trùng với Mật Khẩu Xác Nhận");

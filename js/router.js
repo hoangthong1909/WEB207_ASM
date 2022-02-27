@@ -36,9 +36,6 @@ app.config(function ($routeProvider, $locationProvider) {
         .when("/changepassword", {
             templateUrl: 'router/changepassword.html',
         })
-        .when("/changepassword", {
-            templateUrl: 'router/changepassword.html',
-        })
         .when("/user", {
             templateUrl: 'router/usermanager.html',
             controller: 'FormController'

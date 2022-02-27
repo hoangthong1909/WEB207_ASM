@@ -5,7 +5,7 @@
       "text": "Câu 2. Câu lệnh SQL nào được dùng để cập nhật dữ liệu từ databdae?",
       "da1": "Get",
       "da2": "Open",
-      "da3": "Update",
+      "da3": "Update11111",
       "da4": "Select",
       "check": "2",
       "da": "Open"
@@ -287,6 +287,16 @@
       "id": 33,
       "da": "Extract1",
       "check": "3"
+    },
+    {
+      "text": "Câu lệnh SQL nào được dùng để truy xuất dữ liệu từ database?",
+      "da1": "1",
+      "da2": "2",
+      "da3": "3",
+      "da4": "4",
+      "da": "3",
+      "check": "3",
+      "id": 34
     }
   ],
   "sv": [
@@ -300,16 +310,6 @@
       "isAdmin": "Admin",
       "id": 8,
       "name": "Admin"
-    },
-    {
-      "email": "sangngu@gmail.com",
-      "pass1": "123123",
-      "pass": "123123",
-      "fullname": "ngu",
-      "gender": "1",
-      "address": "ngu1111111111111111",
-      "id": 13,
-      "name": "thonghoang"
     },
     {
       "gender": "1",
@@ -408,15 +408,124 @@
       "id": 56
     },
     {
-      "gender": "0",
-      "isAdmin": 0,
-      "name": "thongne1234",
-      "fullname": "Thong hoang",
-      "email": "sangngu1111@gmail.com",
+      "gender": "1",
+      "name": "thonghoang999",
+      "fullname": "HoangTrungThong",
+      "email": "thonghh@gmail.com",
+      "pass": "123123",
+      "pass1": "123123",
+      "address": "Ha Noi",
+      "id": 60
+    },
+    {
+      "gender": "1",
+      "name": "thongpzzzzzzzzzzz",
+      "email": "sangngu@gmail.com",
+      "fullname": "HoangTrungThong",
+      "pass": "123123",
+      "pass1": "123123",
+      "address": "TB111",
+      "id": 61
+    },
+    {
+      "gender": "1",
+      "name": "thongne3",
+      "fullname": "HoangTrungThong",
+      "email": "thonghh@gmail.com",
       "pass1": "123123",
       "pass": "123123",
+      "address": "Ha Noi",
+      "id": 62
+    },
+    {
+      "gender": "1",
+      "name": "thongpz111",
+      "email": "sangngu@gmail.com",
+      "fullname": "HoangTrungThong",
+      "pass": "123123",
+      "pass1": "123123",
       "address": "ha Noi",
-      "id": 57
+      "id": 63
+    },
+    {
+      "gender": "1",
+      "name": "thongpzzzzzzzzzzz",
+      "email": "thanh2@gmail.com",
+      "fullname": "HoangTrungThong",
+      "pass": "123123",
+      "pass1": "123123",
+      "address": "TB",
+      "id": 64
+    },
+    {
+      "gender": "1",
+      "name": "thongpzzzz",
+      "email": "thanh2@gmail.com",
+      "fullname": "thanhpro",
+      "pass": "123123",
+      "pass1": "123123",
+      "address": "TB111",
+      "id": 65
+    },
+    {
+      "gender": "1",
+      "name": "thongpzzzzz",
+      "email": "thanh2@gmail.com",
+      "fullname": "thanhpro",
+      "pass": "123123",
+      "pass1": "123123",
+      "address": "TB",
+      "id": 66
+    },
+    {
+      "gender": "1",
+      "name": "thongpzzzzzzzz",
+      "email": "thanh2@gmail.com",
+      "fullname": "HoangTrungThong",
+      "pass": "123123",
+      "pass1": "123123",
+      "address": "ha Noi",
+      "id": 67
+    },
+    {
+      "gender": "1",
+      "name": "thongpzzzzz",
+      "email": "thonghh@gmail.com",
+      "fullname": "HoangTrungThong",
+      "pass": "123123",
+      "pass1": "123123",
+      "address": "TB111",
+      "id": 68
+    },
+    {
+      "gender": "1",
+      "name": "thongpzz",
+      "email": "thonghh@gmail.com",
+      "fullname": "HoangTrungThong",
+      "pass": "123123",
+      "pass1": "123123",
+      "address": "TB",
+      "id": 69
+    },
+    {
+      "gender": "1",
+      "name": "thongpzzaa",
+      "email": "thonghh@gmail.com",
+      "fullname": "HoangTrungThong",
+      "pass": "123123",
+      "pass1": "123123",
+      "address": "Ha Noi",
+      "id": 70
+    },
+    {
+      "gender": "1",
+      "name": "thongpzzzzz",
+      "email": "thonghh@gmail.com",
+      "fullname": "thanhpro",
+      "pass": "123123",
+      "pass1": "123123",
+      "address": "TB111",
+      "id": 71
     }
   ],
   "subject": [

@@ -1,6 +1,10 @@
-function indexController($scope, $rootScope, $http) {
+function indexController($scope, $rootScope, $http,$location) {
     $rootScope.login = false;
     console.log($rootScope.isLogin);
+
+    $scope.goto =function(path){
+        $location.path(path);
+    }
 
     $scope.logout = function () {
         sessionStorage.removeItem('isLogin');
@@ -20,7 +24,7 @@ function indexController($scope, $rootScope, $http) {
                 alert("Cập Nhật Thành Công , Vui lòng đăng nhập lại");
                 sessionStorage.removeItem('isLogin');
                 $rootScope.login = false;
-                window.location = "http://127.0.0.1:5501/index.html#/login";
+               $scope.goto("login");
             })
     }
     $scope.changePassword = function () {
